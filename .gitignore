@@ -1,0 +1,10 @@
+﻿__pycache__/
+*.pyc
+.env
+*.log
+
+# Never commit secrets
+secrets/
+
+# Scanner archive files
+RSI_Scanner_*.csv
