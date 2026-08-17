@@ -1,58 +1,189 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RSI Trading System Dashboard</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RSI Trading System — Decision Dashboard</title>
 <style>
-:root{--bg:#07101f;--p:#121c35;--b:#2b3b62;--t:#edf3ff;--m:#91a1c5;--g:#39e6a5;--y:#ffc857;--r:#ff6473;--bl:#78a6ff;--c:#38d9ff}
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#050b16,#0b152b);color:var(--t);font:14px Segoe UI,Arial,sans-serif}.wrap{max-width:1700px;margin:auto;padding:22px}
-header{display:flex;justify-content:space-between;gap:18px;margin-bottom:18px}h1{margin:0;font-size:30px}.muted,.sub{color:var(--m)}
-.status,.card,.panel{background:var(--p);border:1px solid var(--b);border-radius:14px;box-shadow:0 8px 25px #0004}.status{padding:14px 18px;min-width:245px}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--g);box-shadow:0 0 12px var(--g);margin-right:7px}
-.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.card{padding:16px}.label{color:var(--m);font-size:12px}.value{font-size:28px;font-weight:800;margin-top:6px}.g{color:var(--g)}.y{color:var(--y)}.r{color:var(--r)}.bl{color:var(--bl)}.c{color:var(--c)}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 12px}.tab{background:var(--p);color:var(--t);border:1px solid var(--b);border-radius:9px;padding:9px 14px;cursor:pointer}.tab.on{background:#23375f}
-.sec{display:none}.sec.on{display:block}.panel{padding:16px;margin-bottom:16px}.head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.title{font-size:18px;font-weight:750}.controls{display:flex;gap:8px;flex-wrap:wrap}
-input,select,button{background:#0b152b;color:var(--t);border:1px solid var(--b);border-radius:8px;padding:9px}button{cursor:pointer;background:#21365f}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.mini>div{background:#0b162d;border:1px solid #26365b;border-radius:10px;padding:13px}.mini b{display:block;font-size:21px;margin-top:4px}
+:root{--bg:#07101f;--p:#121c35;--p2:#0b162d;--b:#2b3b62;--t:#edf3ff;--m:#91a1c5;--g:#39e6a5;--y:#ffc857;--r:#ff6473;--bl:#78a6ff;--c:#38d9ff}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#050b16,#0b152b);color:var(--t);font:14px Segoe UI,Arial,sans-serif}.wrap{max-width:1750px;margin:auto;padding:20px}
+header{display:flex;justify-content:space-between;gap:18px;margin-bottom:16px}h1{margin:0;font-size:30px}.sub,.muted{color:var(--m)}
+.status,.card,.panel{background:var(--p);border:1px solid var(--b);border-radius:14px;box-shadow:0 8px 25px #0004}.status{padding:12px 16px;min-width:245px}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--g);box-shadow:0 0 10px var(--g);margin-right:7px}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.card{padding:14px}.label{color:var(--m);font-size:12px}.value{font-size:27px;font-weight:800;margin-top:5px}.g{color:var(--g)}.y{color:var(--y)}.r{color:var(--r)}.bl{color:var(--bl)}.c{color:var(--c)}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0 12px}.tab{background:var(--p);color:var(--t);border:1px solid var(--b);border-radius:9px;padding:9px 13px;cursor:pointer}.tab.on{background:#23375f}.sec{display:none}.sec.on{display:block}
+.panel{padding:15px;margin-bottom:14px}.head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:11px}.title{font-size:18px;font-weight:750}.controls{display:flex;gap:7px;flex-wrap:wrap}
+input,select,button{background:#0b152b;color:var(--t);border:1px solid var(--b);border-radius:8px;padding:8px}button{cursor:pointer;background:#21365f}
+.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.mini>div,.metric{background:var(--p2);border:1px solid #26365b;border-radius:10px;padding:12px}.mini b{display:block;font-size:20px;margin-top:4px}
+.decision{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.decision-card{background:linear-gradient(145deg,#12233e,#0b162d);border:1px solid #31507f;border-radius:13px;padding:16px}.decision-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.symbig{font-size:23px;font-weight:850;color:var(--c)}.tag{color:var(--m);margin-top:3px}.price{font-size:25px;font-weight:800}.pl{font-size:15px;font-weight:750}.checklist{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:13px}.check{padding:9px;border-radius:9px;background:#0b162d;border:1px solid #26365b}.check b{display:block;margin-bottom:3px}.ok{color:var(--g)}.warn{color:var(--y)}.bad{color:var(--r)}
+.levels{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:13px}.level{padding:8px 5px;text-align:center;background:#0b162d;border:1px solid #26365b;border-radius:8px}.level small{display:block;color:var(--m)}.level b{display:block;margin-top:3px}
+.queue-row{display:grid;grid-template-columns:1.5fr .8fr .8fr .8fr 1fr;gap:8px;align-items:center;padding:10px;border-bottom:1px solid #273555}.queue-row:last-child{border-bottom:0}.ready{color:var(--g);font-weight:800}.near{color:var(--y);font-weight:800}
 .table{overflow:auto}table{width:100%;border-collapse:collapse;min-width:950px}th,td{padding:9px;border-bottom:1px solid #273555;white-space:nowrap;text-align:left}th{background:#182542;color:#afbedc;font-size:12px;position:sticky;top:0}tr:hover td{background:#12203a}
-a.sym{color:#42e5ff;font-weight:800;text-decoration:none}.badge{padding:4px 8px;border-radius:99px;font-size:11px;font-weight:800}.setup{color:var(--g);background:#39e6a51c}.watch{color:var(--y);background:#ffc8571c}.wait{color:var(--bl);background:#78a6ff1c}.ignore{color:var(--r);background:#ff64731c}.active{color:var(--g);background:#39e6a51c}.complete{color:var(--bl);background:#78a6ff1c}.empty{text-align:center;color:var(--m);padding:30px}.err{color:var(--r);padding:15px}.footer{text-align:center;color:#7181a4;font-size:12px;padding:15px}
-@media(max-width:1100px){.cards{grid-template-columns:repeat(3,1fr)}}@media(max-width:700px){.wrap{padding:10px}header{display:block}.status{margin-top:12px}.cards,.mini,.grid2{grid-template-columns:1fr 1fr}}
-</style></head><body><div class="wrap">
-<header><div><h1>📊 RSI Trading System</h1><div class="sub">Weekly RSI &gt; 50 → Hourly RSI touch 30 → 15m price confirmation</div></div>
-<div class="status"><b><span class="dot"></span><span id="status">LOADING</span></b><div class="muted">Latest scan: <span id="scan">—</span></div><div class="muted">Updated: <span id="updated">—</span></div></div></header>
-<div class="cards">
-<div class="card"><div class="label">🔥 SETUPS</div><div id="setups" class="value g">—</div></div><div class="card"><div class="label">👀 WATCH</div><div id="watch" class="value y">—</div></div><div class="card"><div class="label">⏳ WAIT</div><div id="wait" class="value bl">—</div></div><div class="card"><div class="label">❌ IGNORE</div><div id="ignore" class="value r">—</div></div><div class="card"><div class="label">📌 ACTIVE</div><div id="active" class="value c">—</div></div><div class="card"><div class="label">✅ COMPLETED</div><div id="completed" class="value bl">—</div></div></div>
-<div class="tabs"><button class="tab on" data-s="overview">Overview</button><button class="tab" data-s="scanner">Live Scanner</button><button class="tab" data-s="activeTab">Active Setups</button><button class="tab" data-s="history">Setup History</button><button class="tab" data-s="stats">Statistics</button><button class="tab" data-s="tags">Tag Performance</button></div>
+a.sym{color:#42e5ff;font-weight:800;text-decoration:none}.badge{padding:4px 8px;border-radius:99px;font-size:11px;font-weight:800}.setup{color:var(--g);background:#39e6a51c}.watch{color:var(--y);background:#ffc8571c}.wait{color:var(--bl);background:#78a6ff1c}.ignore{color:var(--r);background:#ff64731c}.active{color:var(--g);background:#39e6a51c}.complete{color:var(--bl);background:#78a6ff1c}.empty{text-align:center;color:var(--m);padding:28px}.err{color:var(--r);padding:15px}.note{color:var(--m);font-size:12px}.footer{text-align:center;color:#7181a4;font-size:12px;padding:14px}
+@media(max-width:1150px){.cards{grid-template-columns:repeat(3,1fr)}.decision,.grid2{grid-template-columns:1fr}}@media(max-width:700px){.wrap{padding:9px}.cards,.mini,.grid3,.checklist{grid-template-columns:1fr 1fr}.levels{grid-template-columns:repeat(4,1fr)}header{display:block}.status{margin-top:10px}.queue-row{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div><h1>📊 RSI Trading System</h1><div class="sub">Weekly RSI &gt; 50 → Hourly RSI touch 30 → 15m price confirmation</div></div>
+<div class="status"><b><span class="dot"></span><span id="status">LOADING</span></b><div class="muted">Latest scan: <span id="scan">—</span></div><div class="muted">Dashboard: <span id="updated">—</span></div></div>
+</header>
 
-<section id="overview" class="sec on"><div class="grid2"><div class="panel"><div class="head"><div class="title">Strategy</div></div><div class="mini">
-<div><span class="muted">Weekly RSI</span><b class="g">&gt; 50</b></div><div><span class="muted">Hourly trigger</span><b class="y">Touch 30</b></div><div><span class="muted">Confirmation</span><b class="c">15m</b></div><div><span class="muted">15m RSI</span><b>Removed</b></div></div></div>
-<div class="panel"><div class="head"><div class="title">Target Hit Rates</div></div><div class="mini"><div><span class="muted">+1%</span><b id="p1">—</b></div><div><span class="muted">+2%</span><b id="p2">—</b></div><div><span class="muted">+3%</span><b id="p3">—</b></div><div><span class="muted">+5%</span><b id="p5">—</b></div></div></div></div>
+<div class="cards">
+<div class="card"><div class="label">🔥 SETUPS</div><div id="setups" class="value g">—</div></div>
+<div class="card"><div class="label">👀 WATCH</div><div id="watch" class="value y">—</div></div>
+<div class="card"><div class="label">⏳ WAIT</div><div id="wait" class="value bl">—</div></div>
+<div class="card"><div class="label">❌ IGNORE</div><div id="ignore" class="value r">—</div></div>
+<div class="card"><div class="label">📌 ACTIVE</div><div id="active" class="value c">—</div></div>
+<div class="card"><div class="label">✅ COMPLETED</div><div id="completed" class="value bl">—</div></div>
+</div>
+
+<div class="tabs">
+<button class="tab on" data-s="overview">Decision Center</button>
+<button class="tab" data-s="scanner">Live Scanner</button>
+<button class="tab" data-s="activeTab">Active Setups</button>
+<button class="tab" data-s="history">Setup History</button>
+<button class="tab" data-s="stats">Statistics</button>
+<button class="tab" data-s="tags">Tag Performance</button>
+</div>
+
+<section id="overview" class="sec on">
+<div class="decision">
+<div id="decisionCards"></div>
+<div>
+<div class="panel"><div class="head"><div class="title">🎯 Decision Rules</div></div>
+<div class="mini">
+<div><span class="muted">Weekly RSI</span><b class="g">&gt; 50</b></div>
+<div><span class="muted">Hourly trigger</span><b class="y">Touch 30</b></div>
+<div><span class="muted">Confirmation</span><b class="c">15m</b></div>
+<div><span class="muted">15m RSI</span><b>Removed</b></div>
+</div>
+<div class="note" style="margin-top:10px">The dashboard does not create a new trading rule. It only explains the existing scanner result and outcome levels.</div>
+</div>
+<div class="panel"><div class="head"><div class="title">📌 Watch Queue</div></div><div id="queue"></div></div>
+</div>
+</div>
+
+<div class="grid3">
+<div class="panel"><div class="head"><div class="title">📈 Outcome Analytics</div></div><div id="outcomeMini"></div></div>
+<div class="panel"><div class="head"><div class="title">🏷️ Tag Analytics</div></div><div id="tagMini"></div></div>
+<div class="panel"><div class="head"><div class="title">🕒 Data Health</div></div><div id="health"></div></div>
+</div>
+
 <div class="panel"><div class="head"><div class="title">🔥 Current Setups</div><button onclick="load()">Refresh</button></div><div id="ov"></div></div>
-<div class="panel"><div class="head"><div class="title">Latest Setup History</div></div><div id="ovh"></div></div></section>
+<div class="panel"><div class="head"><div class="title">Latest Setup History</div></div><div id="ovh"></div></div>
+</section>
 
 <section id="scanner" class="sec"><div class="panel"><div class="head"><div class="title">Live Scanner</div><div class="controls"><input id="sq" placeholder="Search symbol/tag" oninput="scanner()"><select id="sf" onchange="scanner()"><option value="">All</option><option>SETUP</option><option>WATCH</option><option>WAIT</option><option>IGNORE</option></select><button onclick="load()">Refresh</button></div></div><div id="st" class="table"></div></div></section>
+
 <section id="activeTab" class="sec"><div class="panel"><div class="head"><div class="title">📌 Active Setups</div></div><div id="at" class="table"></div></div></section>
+
 <section id="history" class="sec"><div class="panel"><div class="head"><div class="title">Setup History + Outcomes</div><div class="controls"><input id="hq" placeholder="Search symbol/tag" oninput="history()"><select id="hf" onchange="history()"><option value="">All</option><option>ACTIVE</option><option>COMPLETED</option></select></div></div><div id="ht" class="table"></div></div></section>
+
 <section id="stats" class="sec"><div class="panel"><div class="head"><div class="title">Overall Trading Statistics</div></div><div id="stat" class="table"></div></div></section>
+
 <section id="tags" class="sec"><div class="panel"><div class="head"><div class="title">Performance by Tag</div></div><div id="tag" class="table"></div></div></section>
-<div class="footer">Data is loaded from the CSV files committed to this repository. Auto-refresh: 5 minutes.</div></div>
+
+<div class="footer">Decision layer reads the existing CSV outputs only. Auto-refresh: 5 minutes.</div>
+</div>
 
 <script>
 const D={latest:[],history:[],stats:[],tags:[]};
 const F={latest:'latest_results.csv',history:'Setup_History.csv',stats:'Trading_Statistics.csv',tags:'Trading_Statistics_By_Tag.csv'};
-function csv(t){let R=[],r=[],f='',q=0;for(let i=0;i<t.length;i++){let c=t[i],n=t[i+1];if(c=='"'){if(q&&n=='"'){f+='"';i++}else q=!q}else if(c==','&&!q){r.push(f);f=''}else if((c=='\n'||c=='\r')&&!q){if(c=='\r'&&n=='\n')i++;r.push(f);f='';if(r.some(x=>x.trim()))R.push(r);r=[]}else f+=c}if(f||r.length){r.push(f);if(r.some(x=>x.trim()))R.push(r)}if(!R.length)return[];let h=R[0].map(x=>x.trim());return R.slice(1).map(x=>Object.fromEntries(h.map((k,i)=>[k,(x[i]||'').trim()])));}
+
+function csv(t){let R=[],r=[],f='',q=0;for(let i=0;i<t.length;i++){let c=t[i],n=t[i+1];if(c=='"'){if(q&&n=='"'){f+='"';i++}else q=!q}else if(c==','&&!q){r.push(f);f=''}else if((c=='\n'||c=='\r')&&!q){if(c=='\r'&&n=='\n')i++;r.push(f);f='';if(r.some(x=>x.trim()))R.push(r);r=[]}else f+=c}if(f||r.length){r.push(f);if(r.some(x=>x.trim()))R.push(r)}if(!R.length)return[];let h=R[0].map(x=>x.trim().replace(/^\uFEFF/,''));return R.slice(1).map(x=>Object.fromEntries(h.map((k,i)=>[k,(x[i]||'').trim()])));}
 async function get(f){let r=await fetch(f+'?v='+Date.now());if(!r.ok)throw Error(f+' HTTP '+r.status);return csv(await r.text())}
-function n(v){let x=parseFloat(String(v).replace(/,/g,''));return Number.isFinite(x)?x:null}function N(v){let x=n(v);return x===null?'—':x.toFixed(2)}function P(v){let x=n(v);return x===null?'—':(x>0?'+':'')+x.toFixed(2)+'%'}function E(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function n(v){let x=parseFloat(String(v).replace(/,/g,''));return Number.isFinite(x)?x:null}
+function N(v){let x=n(v);return x===null?'—':x.toFixed(2)}
+function P(v){let x=n(v);return x===null?'—':(x>0?'+':'')+x.toFixed(2)+'%'}
+function E(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
 function L(s){let x=String(s||'').replace(/^NSE:/i,'').replace(/\\/g,'').trim();return '<a class="sym" target="_blank" href="https://chartink.com/stocks/'+encodeURIComponent(x)+'.html">'+E(s)+'</a>'}
 function B(s){let x=String(s||'').toUpperCase(),c=x.includes('SETUP')?'setup':x.includes('WATCH')?'watch':x.includes('WAIT')?'wait':'ignore';return '<span class="badge '+c+'">'+E(x||'—')+'</span>'}
 function SB(s){let x=String(s||'').toUpperCase();return '<span class="badge '+(x==='COMPLETED'?'complete':'active')+'">'+E(x||'—')+'</span>'}
-function T(r){return r.Tag||r.Category||'—'}function set(i,v){document.getElementById(i).textContent=v}
+function T(r){return r.Tag||r.Category||'—'}
+function set(i,v){document.getElementById(i).textContent=v}
 
-function setupTable(a){if(!a.length)return'<div class="empty">No setup records.</div>';return '<table><thead><tr><th>Setup Time</th><th>Symbol</th><th>Tag</th><th>Entry</th><th>Weekly RSI</th><th>Hourly RSI</th><th>15m Confirmation</th><th>15m Close</th><th>Prev 15m High</th><th>Status</th><th>Max Gain</th><th>Max Loss</th><th>1D</th><th>3D</th><th>5D</th></tr></thead><tbody>'+a.map(r=>'<tr><td>'+E(r['Setup Time']||'—')+'</td><td>'+L(r.Symbol)+'</td><td>'+E(r.Tag||'—')+'</td><td>₹'+N(r['Entry Price'])+'</td><td>'+N(r['Weekly RSI'])+'</td><td>'+N(r['Hourly RSI'])+'</td><td>'+E(r['15m Confirmation Candle']||'—')+'</td><td>₹'+N(r['15m Close'])+'</td><td>₹'+N(r['Previous 15m High'])+'</td><td>'+SB(r.Status)+'</td><td>'+P(r['Max Gain %'])+'</td><td>'+P(r['Max Loss %'])+'</td><td>'+P(r['1D Return %'])+'</td><td>'+P(r['3D Return %'])+'</td><td>'+P(r['5D Return %'])+'</td></tr>').join('')+'</tbody></table>'}
+function setupTable(a){
+if(!a.length)return'<div class="empty">No setup records.</div>';
+return '<table><thead><tr><th>Setup Time</th><th>Symbol</th><th>Tag</th><th>Entry</th><th>Weekly RSI</th><th>Hourly RSI</th><th>15m Confirmation</th><th>15m Close</th><th>Prev 15m High</th><th>Status</th><th>Max Gain</th><th>Max Loss</th><th>1D</th><th>3D</th><th>5D</th></tr></thead><tbody>'+
+a.map(r=>'<tr><td>'+E(r['Setup Time']||'—')+'</td><td>'+L(r.Symbol)+'</td><td>'+E(r.Tag||'—')+'</td><td>₹'+N(r['Entry Price'])+'</td><td>'+N(r['Weekly RSI'])+'</td><td>'+N(r['Hourly RSI'])+'</td><td>'+E(r['15m Confirmation Candle']||'—')+'</td><td>₹'+N(r['15m Close'])+'</td><td>₹'+N(r['Previous 15m High'])+'</td><td>'+SB(r.Status)+'</td><td>'+P(r['Max Gain %'])+'</td><td>'+P(r['Max Loss %'])+'</td><td>'+P(r['1D Return %'])+'</td><td>'+P(r['3D Return %'])+'</td><td>'+P(r['5D Return %'])+'</td></tr>').join('')+'</tbody></table>'
+}
 
-function scanner(){let q=(document.getElementById('sq')?.value||'').toLowerCase(),f=(document.getElementById('sf')?.value||'').toUpperCase();let a=D.latest.filter(r=>{let s=String(r.Signal||'').toUpperCase(),x=(r.Symbol+' '+T(r)+' '+r.Reason).toLowerCase();return(!q||x.includes(q))&&(!f||s.includes(f))});document.getElementById('st').innerHTML=a.length?'<table><thead><tr><th>Symbol</th><th>Tag</th><th>LTP</th><th>Weekly RSI</th><th>Weekly Δ</th><th>Hourly RSI</th><th>Hourly Δ</th><th>Hourly Rising</th><th>Signal</th><th>Reason</th></tr></thead><tbody>'+a.map(r=>'<tr><td>'+L(r.Symbol)+'</td><td>'+E(T(r))+'</td><td>₹'+N(r['Current LTP'])+'</td><td>'+N(r['Current Week RSI'])+'</td><td>'+P(r['Weekly RSI Change'])+'</td><td>'+N(r['Current Hourly RSI'])+'</td><td>'+P(r['Hourly RSI Change'])+'</td><td>'+E(r['Hourly RSI Rising']||'—')+'</td><td>'+B(r.Signal)+'</td><td>'+E(r.Reason||'—')+'</td></tr>').join('')+'</tbody></table>':'<div class="empty">No scanner results.</div>'}
+function decisionCard(r){
+let entry=n(r['Entry Price']),ltp=n(r['Current LTP']),wr=n(r['Weekly RSI']),hr=n(r['Hourly RSI']),c15=n(r['15m Close']),ph=n(r['Previous 15m High']);
+let pl=entry&&ltp?((ltp-entry)/entry*100):null;
+let weekly=wr!==null&&wr>50, hourly=hr!==null&&hr<=30, conf=c15!==null&&ph!==null&&c15>ph;
+let levels=[-3,-2,-1,1,2,3,5];
+let levelHtml=levels.map(x=>{let price=entry?entry*(1+x/100):null;return '<div class="level"><small>'+((x>0?'+':'')+x)+'%</small><b>'+ (price?'₹'+price.toFixed(2):'—')+'</b></div>'}).join('');
+return '<div class="decision-card"><div class="decision-head"><div><div class="symbig">'+L(r.Symbol)+'</div><div class="tag">'+E(T(r))+'</div></div><div style="text-align:right"><div class="price">₹'+N(ltp)+'</div><div class="pl '+(pl===null?'':pl>=0?'ok':'bad')+'">'+P(pl)+' vs entry</div></div></div>'+
+'<div style="margin-top:13px"><span class="badge setup">🔥 SETUP</span> <span class="muted">Setup time: '+E(r['Setup Time']||'—')+'</span></div>'+
+'<div class="checklist"><div class="check"><b class="'+(weekly?'ok':'bad')+'">'+(weekly?'✅':'❌')+' Weekly RSI</b><span>'+N(wr)+' &gt; 50</span></div>'+
+'<div class="check"><b class="'+(hourly?'ok':'warn')+'">'+(hourly?'✅':'⚠️')+' Hourly RSI</b><span>'+N(hr)+' at setup</span></div>'+
+'<div class="check"><b class="'+(conf?'ok':'bad')+'">'+(conf?'✅':'❌')+' 15m Confirm</b><span>Close '+N(c15)+' vs High '+N(ph)+'</span></div></div>'+
+'<div class="levels">'+levelHtml+'</div><div class="note" style="margin-top:9px">Outcome levels are price thresholds derived from the setup entry. They are tracking levels, not additional scanner rules.</div></div>'
+}
 
-function history(){let q=(document.getElementById('hq')?.value||'').toLowerCase(),f=(document.getElementById('hf')?.value||'').toUpperCase();let a=D.history.filter(r=>{let x=(r.Symbol+' '+r.Tag).toLowerCase(),s=String(r.Status||'').toUpperCase();return(!q||x.includes(q))&&(!f||s===f)}).sort((a,b)=>String(b['Setup Time']).localeCompare(String(a['Setup Time'])));document.getElementById('ht').innerHTML=setupTable(a)}
-function stats(){document.getElementById('stat').innerHTML=D.stats.length?'<table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>'+D.stats.map(r=>'<tr><td>'+E(r.Metric)+'</td><td>'+N(r.Value)+'</td></tr>').join('')+'</tbody></table>':'<div class="empty">No statistics.</div>'}
-function tags(){if(!D.tags.length){document.getElementById('tag').innerHTML='<div class="empty">No tag statistics.</div>';return}let c=Object.keys(D.tags[0]);document.getElementById('tag').innerHTML='<table><thead><tr>'+c.map(x=>'<th>'+E(x)+'</th>').join('')+'</tr></thead><tbody>'+D.tags.map(r=>'<tr>'+c.map(x=>'<td>'+((x.includes('Rate')||x.includes('Return')||x.includes('Gain')||x.includes('Loss'))?P(r[x]):E(r[x]))+'</td>').join('')+'</tr>').join('')+'</tbody></table>'}
+function decisionCenter(){
+let setups=D.latest.filter(r=>String(r.Signal||'').toUpperCase().includes('SETUP'));
+let active=D.history.filter(r=>String(r.Status||'').toUpperCase()==='ACTIVE');
+document.getElementById('decisionCards').innerHTML=active.length?active.map(h=>{
+let live=D.latest.find(x=>x.Symbol===h.Symbol)||h;return decisionCard(Object.assign({},h,live))
+}).join(''):setups.length?setups.map(r=>decisionCard(r)).join(''):'<div class="panel empty">No active or current SETUP.</div>';
 
-async function load(){set('status','LOADING');try{[D.latest,D.history,D.stats,D.tags]=await Promise.all([get(F.latest),get(F.history),get(F.stats),get(F.tags)]);set('status','LIVE');set('scan',D.latest.map(x=>x['Scan Time']).filter(Boolean).sort().at(-1)||'—');set('updated',new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}));let c={SETUP:0,WATCH:0,WAIT:0,IGNORE:0};D.latest.forEach(r=>{let s=String(r.Signal||'').toUpperCase();if(s.includes('SETUP'))c.SETUP++;else if(s.includes('WATCH'))c.WATCH++;else if(s.includes('WAIT'))c.WAIT++;else if(s.includes('IGNORE'))c.IGNORE++});set('setups',c.SETUP);set('watch',c.WATCH);set('wait',c.WAIT);set('ignore',c.IGNORE);set('active',D.history.filter(r=>String(r.Status).toUpperCase()==='ACTIVE').length);set('completed',D.history.filter(r=>String(r.Status).toUpperCase()==='COMPLETED').length);scanner();history();stats();tags();document.getElementById('at').innerHTML=setupTable(D.history.filter(r=>String(r.Status).toUpperCase()==='ACTIVE'));let ss=D.latest.filter(r=>String(r.Signal).toUpperCase().includes('SETUP'));document.getElementById('ov').innerHTML=ss.length?'<div class="table"><table><thead><tr><th>Symbol</th><th>Tag</th><th>LTP</th><th>Weekly RSI</th><th>Hourly RSI</th><th>Signal</th><th>Reason</th></tr></thead><tbody>'+ss.map(r=>'<tr><td>'+L(r.Symbol)+'</td><td>'+E(T(r))+'</td><td>₹'+N(r['Current LTP'])+'</td><td>'+N(r['Current Week RSI'])+'</td><td>'+N(r['Current Hourly RSI'])+'</td><td>'+B(r.Signal)+'</td><td>'+E(r.Reason)+'</td></tr>').join('')+'</tbody></table></div>':'<div class="empty">No SETUP signals in latest scan.</div>';document.getElementById('ovh').innerHTML=setupTable([...D.history].sort((a,b)=>String(b['Setup Time']).localeCompare(String(a['Setup Time']))).slice(0,5));let f=m=>D.stats.find(r=>String(r.Metric).includes(m));set('p1',f('+1% Hit Rate')?P(f('+1% Hit Rate').Value):'—');set('p2',f('+2% Hit Rate')?P(f('+2% Hit Rate').Value):'—');set('p3',f('+3% Hit Rate')?P(f('+3% Hit Rate').Value):'—');set('p5',f('+5% Hit Rate')?P(f('+5% Hit Rate').Value):'—')}catch(err){set('status','ERROR');document.getElementById('st').innerHTML='<div class="err">Unable to load data: '+E(err.message)+'</div>'}}
+let queue=D.latest.filter(r=>String(r.Signal||'').toUpperCase().includes('WATCH') && n(r['Current Week RSI'])>50)
+.map(r=>{let h=n(r['Current Hourly RSI']);return {...r,dist:h===null?999:Math.abs(h-30)}}).sort((a,b)=>a.dist-b.dist).slice(0,8);
+document.getElementById('queue').innerHTML=queue.length?queue.map(r=>'<div class="queue-row"><div>'+L(r.Symbol)+'<div class="note">'+E(T(r))+'</div></div><div>W RSI<br><b>'+N(r['Current Week RSI'])+'</b></div><div>H RSI<br><b>'+N(r['Current Hourly RSI'])+'</b></div><div>Distance<br><b class="'+(r.dist<=5?'near':'')+'">'+r.dist.toFixed(2)+'</b></div><div class="'+(r.dist<=5?'near':'')+'">'+(r.dist<=5?'NEAR 30':'WATCH')+'</div></div>').join(''):'<div class="empty">No WATCH candidates.</div>';
 
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));document.querySelectorAll('.sec').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.s).classList.add('on')});load();setInterval(load,300000);
-</script></body></html>
+let completed=D.history.filter(r=>String(r.Status||'').toUpperCase()==='COMPLETED').length;
+let statsMap={};D.stats.forEach(r=>statsMap[r.Metric]=n(r.Value));
+let hit=k=>completed?P(statsMap[k]):'—';
+document.getElementById('outcomeMini').innerHTML='<div class="mini"><div><span class="muted">Completed</span><b>'+completed+'</b></div><div><span class="muted">+1%</span><b>'+hit('+1% Hit Rate %')+'</b></div><div><span class="muted">+3%</span><b>'+hit('+3% Hit Rate %')+'</b></div><div><span class="muted">3% win</span><b>'+hit('3% Target Win Rate %')+'</b></div></div><div class="note" style="margin-top:9px">'+(completed?'Based on completed setups.':'No completed setups yet; hit rates are shown as — rather than 0%.')+'</div>';
+
+let tags=D.tags.sort((a,b)=>(n(b.Setups)||0)-(n(a.Setups)||0)).slice(0,4);
+document.getElementById('tagMini').innerHTML=tags.length?tags.map(r=>'<div class="metric"><b>'+E(r.Tag)+'</b><div class="note">'+E(r.Setups)+' setup(s) · '+E(r.Completed)+' completed</div><div style="margin-top:5px">+3% hit: '+(n(r.Completed)?P(r['+3% Hit Rate %']):'—')+'</div></div>').join(''):'<div class="empty">No tag data.</div>';
+
+let scan=D.latest.map(x=>x['Scan Time']).filter(Boolean).sort().at(-1),age='';
+if(scan){let d=new Date(scan.replace(' ','T')+'+05:30'),mins=Math.max(0,Math.round((Date.now()-d.getTime())/60000));age=mins<30?'🟢 Fresh':mins<120?'🟡 Aging':'🔴 Stale';document.getElementById('health').innerHTML='<div class="metric"><b>'+age+'</b><div class="note">Latest scan: '+E(scan)+' IST</div><div style="margin-top:5px">Age: '+mins+' minute(s)</div></div>'}else document.getElementById('health').innerHTML='<div class="metric"><b class="bad">🔴 No scan</b></div>';
+}
+
+function scanner(){
+let q=(document.getElementById('sq')?.value||'').toLowerCase(),f=(document.getElementById('sf')?.value||'').toUpperCase();
+let a=D.latest.filter(r=>{let s=String(r.Signal||'').toUpperCase(),x=(r.Symbol+' '+T(r)+' '+r.Reason).toLowerCase();return(!q||x.includes(q))&&(!f||s.includes(f))});
+document.getElementById('st').innerHTML=a.length?'<table><thead><tr><th>Symbol</th><th>Tag</th><th>LTP</th><th>Weekly RSI</th><th>Weekly Δ</th><th>Hourly RSI</th><th>Hourly Δ</th><th>Hourly Rising</th><th>Signal</th><th>Reason</th></tr></thead><tbody>'+a.map(r=>'<tr><td>'+L(r.Symbol)+'</td><td>'+E(T(r))+'</td><td>₹'+N(r['Current LTP'])+'</td><td>'+N(r['Current Week RSI'])+'</td><td>'+P(r['Weekly RSI Change'])+'</td><td>'+N(r['Current Hourly RSI'])+'</td><td>'+P(r['Hourly RSI Change'])+'</td><td>'+E(r['Hourly RSI Rising']||'—')+'</td><td>'+B(r.Signal)+'</td><td>'+E(r.Reason||'—')+'</td></tr>').join('')+'</tbody></table>':'<div class="empty">No scanner results.</div>'
+}
+
+function history(){
+let q=(document.getElementById('hq')?.value||'').toLowerCase(),f=(document.getElementById('hf')?.value||'').toUpperCase();
+let a=D.history.filter(r=>{let x=(r.Symbol+' '+r.Tag).toLowerCase(),s=String(r.Status||'').toUpperCase();return(!q||x.includes(q))&&(!f||s===f)}).sort((a,b)=>String(b['Setup Time']).localeCompare(String(a['Setup Time'])));
+document.getElementById('ht').innerHTML=setupTable(a)
+}
+function stats(){
+if(!D.stats.length){document.getElementById('stat').innerHTML='<div class="empty">No statistics.</div>';return}
+let completed=D.history.filter(r=>String(r.Status||'').toUpperCase()==='COMPLETED').length;
+document.getElementById('stat').innerHTML='<table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>'+D.stats.map(r=>'<tr><td>'+E(r.Metric)+'</td><td>'+((String(r.Metric).includes('Hit Rate')||String(r.Metric).includes('Return')||String(r.Metric).includes('Gain')||String(r.Metric).includes('Loss')||String(r.Metric).includes('Win Rate'))&&!completed?'—':N(r.Value))+'</td></tr>').join('')+'</tbody></table><div class="note" style="padding-top:8px">Hit rates and return averages are not meaningful until at least one setup is completed.</div>'
+}
+function tags(){
+if(!D.tags.length){document.getElementById('tag').innerHTML='<div class="empty">No tag statistics.</div>';return}
+let c=Object.keys(D.tags[0]);document.getElementById('tag').innerHTML='<table><thead><tr>'+c.map(x=>'<th>'+E(x)+'</th>').join('')+'</tr></thead><tbody>'+D.tags.map(r=>'<tr>'+c.map(x=>'<td>'+((x.includes('Rate')||x.includes('Return')||x.includes('Gain')||x.includes('Loss'))?(n(r.Completed)?P(r[x]):'—'):E(r[x]))+'</td>').join('')+'</tr>').join('')+'</tbody></table>'
+}
+
+async function load(){
+set('status','LOADING');
+try{
+[D.latest,D.history,D.stats,D.tags]=await Promise.all([get(F.latest),get(F.history),get(F.stats),get(F.tags)]);
+set('status','LIVE');set('scan',D.latest.map(x=>x['Scan Time']).filter(Boolean).sort().at(-1)||'—');set('updated',new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}));
+let c={SETUP:0,WATCH:0,WAIT:0,IGNORE:0};D.latest.forEach(r=>{let s=String(r.Signal||'').toUpperCase();if(s.includes('SETUP'))c.SETUP++;else if(s.includes('WATCH'))c.WATCH++;else if(s.includes('WAIT'))c.WAIT++;else if(s.includes('IGNORE'))c.IGNORE++});
+set('setups',c.SETUP);set('watch',c.WATCH);set('wait',c.WAIT);set('ignore',c.IGNORE);set('active',D.history.filter(r=>String(r.Status).toUpperCase()==='ACTIVE').length);set('completed',D.history.filter(r=>String(r.Status).toUpperCase()==='COMPLETED').length);
+decisionCenter();scanner();history();stats();tags();
+document.getElementById('at').innerHTML=setupTable(D.history.filter(r=>String(r.Status).toUpperCase()==='ACTIVE'));
+let ss=D.latest.filter(r=>String(r.Signal).toUpperCase().includes('SETUP'));
+document.getElementById('ov').innerHTML=ss.length?'<div class="table"><table><thead><tr><th>Symbol</th><th>Tag</th><th>LTP</th><th>Weekly RSI</th><th>Hourly RSI</th><th>Signal</th><th>Reason</th></tr></thead><tbody>'+ss.map(r=>'<tr><td>'+L(r.Symbol)+'</td><td>'+E(T(r))+'</td><td>₹'+N(r['Current LTP'])+'</td><td>'+N(r['Current Week RSI'])+'</td><td>'+N(r['Current Hourly RSI'])+'</td><td>'+B(r.Signal)+'</td><td>'+E(r.Reason)+'</td></tr>').join('')+'</tbody></table></div>':'<div class="empty">No SETUP signals in latest scan.</div>';
+document.getElementById('ovh').innerHTML=setupTable([...D.history].sort((a,b)=>String(b['Setup Time']).localeCompare(String(a['Setup Time']))).slice(0,5));
+}catch(err){set('status','ERROR');document.getElementById('st').innerHTML='<div class="err">Unable to load data: '+E(err.message)+'</div>'}
+}
+
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));document.querySelectorAll('.sec').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.s).classList.add('on')});
+load();setInterval(load,300000);
+</script>
+</body>
+</html>

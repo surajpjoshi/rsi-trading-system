@@ -1,16 +1,98 @@
 Symbol,Tag
-NSE:REDINGTON,Volume shocker
-NSE:ABBOTINDIA,Volume shocker
-NSE:ACMESOLAR,Volume shocker
-NSE:AEGISLOG,Volume shocker
-NSE:AEGISVOPAK,Volume shocker
-NSE:AFFLE,Volume shocker
-NSE:AKUMS,Volume shocker
-NSE:ALIVUS,Volume shocker
-NSE:ANANDRATHI,Volume shocker
-NSE:ANANTRAJ,Volume shocker
-NSE:APARINDS,Volume shocker
-NSE:ARE&M,Volume shocker
-NSE:ASTERDM,Volume shocker
-NSE:ASTRAMICRO,Volume shocker
-NSE:ATHERENERG,Volume shocker
+NSE:LGEINDIA,Volume Shocker
+NSE:ASTRAL,Volume Shocker
+NSE:FINCABLES,Volume Shocker
+NSE:GODREJAGRO,Volume Shocker
+NSE:HAPPSTMNDS,Volume Shocker
+NSE:NAZARA,Volume Shocker
+NSE:OFSS,Volume Shocker
+NSE:REDINGTON,Volume Shocker
+NSE:AARTIIND,Dashboard
+NSE:ABB,Dashboard
+NSE:ACMESOLAR,Dashboard
+NSE:ADANIENSOL,Dashboard
+NSE:AEGISLOG,Dashboard
+NSE:AJANTPHARM,Dashboard
+NSE:AKUMS,Dashboard
+NSE:ALIVUS,Dashboard
+NSE:ANANDRATHI,Dashboard
+NSE:APARINDS,Dashboard
+NSE:ASHOKLEY,Dashboard
+NSE:ASTERDM,Dashboard
+NSE:ASTRAMICRO,Dashboard
+NSE:ATHERENERG,Dashboard
+NSE:AUROPHARMA,Dashboard
+NSE:BAJAJ-AUTO,Dashboard
+NSE:BALRAMCHIN,Dashboard
+NSE:BANKBARODA,Dashboard
+NSE:BANKINDIA,Dashboard
+NSE:BDL,Dashboard
+NSE:BEL,Dashboard
+NSE:BEML,Dashboard
+NSE:BHARATFORG,Dashboard
+NSE:BHEL,Dashboard
+NSE:BOSCHLTD,Dashboard
+NSE:CANBK,Dashboard
+NSE:CAPLIPOINT,Dashboard
+NSE:CENTRALBK,Dashboard
+NSE:CGPOWER,Dashboard
+NSE:CHENNPETRO,Dashboard
+NSE:COHANCE,Dashboard
+NSE:CYIENTDLM,Dashboard
+NSE:DATAPATTNS,Dashboard
+NSE:DIVISLAB,Dashboard
+NSE:DYNAMATECH,Dashboard
+NSE:EICHERMOT,Dashboard
+NSE:ENRIN,Dashboard
+NSE:EXIDEIND,Dashboard
+NSE:FINCABLES,Dashboard
+NSE:GLAND,Dashboard
+NSE:GRANULES,Dashboard
+NSE:HAL,Dashboard
+NSE:HEROMOTOCO,Dashboard
+NSE:HFCL,Dashboard
+NSE:HONASA,Dashboard
+NSE:HSCL,Dashboard
+NSE:IFCI,Dashboard
+NSE:INDIANB,Dashboard
+NSE:INOXINDIA,Dashboard
+NSE:IPCALAB,Dashboard
+NSE:JBCHEPHARM,Dashboard
+NSE:JINDALSAW,Dashboard
+NSE:KIRLOSENG,Dashboard
+NSE:LALPATHLAB,Dashboard
+NSE:LAURUSLABS,Dashboard
+NSE:LLOYDSME,Dashboard
+NSE:M&M,Dashboard
+NSE:MAHABANK,Dashboard
+NSE:MAZDOCK,Dashboard
+NSE:MIDHANI,Dashboard
+NSE:MOTHERSON,Dashboard
+NSE:MTARTECH,Dashboard
+NSE:NETWEB,Dashboard
+NSE:NEULANDLAB,Dashboard
+NSE:OFSS,Dashboard
+NSE:PARAS,Dashboard
+NSE:PNB,Dashboard
+NSE:POLYMED,Dashboard
+NSE:POWERINDIA,Dashboard
+NSE:PSB,Dashboard
+NSE:RADICO,Dashboard
+NSE:RKFORGE,Dashboard
+NSE:RRKABEL,Dashboard
+NSE:SAILIFE,Dashboard
+NSE:SAREGAMA,Dashboard
+NSE:SOLARINDS,Dashboard
+NSE:SONACOMS,Dashboard
+NSE:SYRMA,Dashboard
+NSE:TORNTPHARM,Dashboard
+NSE:TVSMOTOR,Dashboard
+NSE:UCOBANK,Dashboard
+NSE:UNIMECH,Dashboard
+NSE:UNIONBANK,Dashboard
+NSE:UNOMINDA,Dashboard
+NSE:VIJAYA,Dashboard
+NSE:WELCORP,Dashboard
+NSE:WOCKPHARMA,Dashboard
+NSE:ZENTEC,Dashboard
+NSE:ZYDUSLIFE,Dashboard
