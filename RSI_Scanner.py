@@ -37,6 +37,9 @@ LATEST_JSON_FILE = SCRIPT_FOLDER / "latest_results.json"
 
 # Persistent history
 HISTORY_FILE = SCRIPT_FOLDER / "RSI_History.csv"
+MONITORING_STATE_FILE = SCRIPT_FOLDER / "RSI_Monitoring_State.csv"
+MONITORING_ENTRY_RSI = 50.0
+MONITORING_EXIT_RSI = 50.0
 
 RSI_PERIOD = 14
 WEEKLY_LOOKBACK_DAYS = 730
@@ -709,6 +712,80 @@ def hourly_rsi_touched_30(symbol, current_hourly_rsi):
         return False
 
 
+# ============================================================
+# 15-MINUTE MONITORING STATE
+# ============================================================
+MONITORING_COLUMNS = ["Symbol","Tag","Monitoring Status","Monitoring Started","Last Hourly RSI","Last Hourly Check","Last 15m Check"]
+
+def load_monitoring_state():
+    if not MONITORING_STATE_FILE.exists():
+        return pd.DataFrame(columns=MONITORING_COLUMNS)
+    try:
+        s=pd.read_csv(MONITORING_STATE_FILE, encoding="utf-8-sig")
+        for c in MONITORING_COLUMNS:
+            if c not in s.columns: s[c]=""
+        s=s.reindex(columns=MONITORING_COLUMNS)
+        s["Symbol"]=s["Symbol"].fillna("").astype(str).str.strip().str.upper()
+        return s[s["Symbol"]!=""].drop_duplicates("Symbol",keep="last").reset_index(drop=True)
+    except Exception as e:
+        print(f"  WARNING: Could not read monitoring state: {e}")
+        return pd.DataFrame(columns=MONITORING_COLUMNS)
+
+def save_monitoring_state(state):
+    if state is None: state=pd.DataFrame(columns=MONITORING_COLUMNS)
+    for c in MONITORING_COLUMNS:
+        if c not in state.columns: state[c]=""
+    state.reindex(columns=MONITORING_COLUMNS).to_csv(MONITORING_STATE_FILE,index=False,encoding="utf-8-sig")
+
+def monitoring_symbols(state):
+    if state is None or state.empty: return set()
+    return set(state["Symbol"].astype(str).str.strip().str.upper())
+
+def hourly_cycle_due(state, now):
+    if state is None or state.empty: return True
+    hour=now.strftime("%Y-%m-%d %H")
+    vals=state["Last Hourly Check"].fillna("").astype(str).str.strip()
+    return not vals.eq(hour).any()
+
+def update_monitoring_state(state, result, now):
+    if result is None: return state
+    symbol=str(result.get("Symbol","")).strip().upper()
+    try: rsi=float(result.get("Current Hourly RSI"))
+    except (TypeError,ValueError): return state
+    if state is None: state=pd.DataFrame(columns=MONITORING_COLUMNS)
+    state=state.copy()
+    for c in MONITORING_COLUMNS:
+        if c not in state.columns: state[c]=""
+    state=state.reindex(columns=MONITORING_COLUMNS)
+    state["Symbol"]=state["Symbol"].fillna("").astype(str).str.strip().str.upper()
+    idx=state.index[state["Symbol"]==symbol].tolist()
+    stamp=now.strftime("%Y-%m-%d %H:%M:%S")
+    if rsi < MONITORING_ENTRY_RSI:
+        if idx:
+            i=idx[-1]; state.at[i,"Tag"]=result.get("Tag",""); state.at[i,"Monitoring Status"]="MONITORING"; state.at[i,"Last Hourly RSI"]=round(rsi,2); state.at[i,"Last Hourly Check"]=stamp
+        else:
+            state=pd.concat([state,pd.DataFrame([{
+                "Symbol":symbol,"Tag":result.get("Tag",""),"Monitoring Status":"MONITORING",
+                "Monitoring Started":stamp,"Last Hourly RSI":round(rsi,2),"Last Hourly Check":stamp,"Last 15m Check":""
+            }])],ignore_index=True)
+            print(f"  ENTERED 15M MONITORING: {symbol} | Hourly RSI {rsi:.2f}")
+    elif idx:
+        state=state.drop(index=idx).reset_index(drop=True)
+        print(f"  EXITED 15M MONITORING: {symbol} | Hourly RSI {rsi:.2f}")
+    return state
+
+def mark_hourly_check(state, now):
+    if state is not None and not state.empty:
+        state=state.copy(); state["Last Hourly Check"]=now.strftime("%Y-%m-%d %H")
+    return state
+
+def mark_15m_check(state, symbols, now):
+    if state is None or state.empty: return state
+    state=state.copy(); syms={str(x).strip().upper() for x in symbols}
+    mask=state["Symbol"].astype(str).str.strip().str.upper().isin(syms)
+    state.loc[mask,"Last 15m Check"]=now.strftime("%Y-%m-%d %H:%M:%S")
+    return state
+
 # SIGNAL LOGIC
 # ============================================================
 
@@ -785,7 +862,7 @@ def classify(
 # PROCESS STOCK
 # ============================================================
 
-def process_stock(symbol, tag=""):
+def process_stock(symbol, tag="", check_15m=True):
     print(f"\nChecking {symbol} ...")
 
     instrument_key = find_instrument_key(symbol)
@@ -823,21 +900,26 @@ def process_stock(symbol, tag=""):
         )
         return None
 
-    fifteen_minute = get_current_15m_price_confirmation(
-        instrument_key
-    )
+    if check_15m:
+        fifteen_minute = get_current_15m_price_confirmation(instrument_key)
+    else:
+        fifteen_minute = {"confirmed": False, "current_close": None, "previous_high": None, "candle": None}
 
     hourly_touch_30 = hourly_rsi_touched_30(
         symbol,
         hourly["current"],
     )
 
-    category, signal, reason = classify(
-        weekly,
-        hourly,
-        fifteen_minute,
-        hourly_touch_30,
-    )
+    if check_15m:
+        category, signal, reason = classify(weekly, hourly, fifteen_minute, hourly_touch_30)
+    else:
+        wr=float(weekly["current"]); hr=float(hourly["current"])
+        if wr <= 50:
+            category,signal,reason="IGNORE","❌ IGNORE",f"Weekly RSI {wr:.2f} <= 50"
+        elif hourly_touch_30:
+            category,signal,reason="WATCH","👀 WATCH",f"Hourly RSI {hr:.2f}; touch <=30 recorded; waiting for 15m monitoring confirmation"
+        else:
+            category,signal,reason="WATCH","👀 WATCH",f"Weekly RSI {wr:.2f} > 50; Hourly RSI {hr:.2f}; 15m confirmation checked only while monitored"
 
     hourly_change = (
         hourly["current"]
@@ -1023,10 +1105,11 @@ def process_stock(symbol, tag=""):
         "15m RSI Change": "",
         "15m RSI Rising": "",
         "15m Rising Count": "",
-        "History Transition": (
-            "15m logic removed"
-        ),
-
+        "History Transition": ("15m logic removed"),
+        "Scan Mode": "15M MONITOR" if check_15m else "HOURLY",
+        "Monitoring Status": "MONITORING" if check_15m else "NORMAL",
+        "Monitoring Started": "",
+        "Last 15m Check": "",
         "Category": category,
         "Signal": signal,
         "Reason": reason,
@@ -1091,6 +1174,10 @@ HISTORY_COLUMNS = [
     "15m RSI Rising",
     "15m Rising Count",
     "History Transition",
+    "Scan Mode",
+    "Monitoring Status",
+    "Monitoring Started",
+    "Last 15m Check",
     "Category",
     "Signal",
     "Reason",
@@ -1299,217 +1386,108 @@ def record_new_setups(results):
 # ============================================================
 
 def main():
-
     print("=" * 90)
-    print("RSI SCANNER")
-    print("Weekly RSI > 50 + Hourly RSI TOUCH 30 + 15m Price Confirmation")
-    print("15m RSI removed; 15m PRICE confirmation retained")
+    print("RSI SCANNER - TWO SPEED MONITORING")
+    print("Hourly RSI < 50 -> 15m monitoring")
+    print("SETUP = Weekly RSI > 50 + Hourly RSI TOUCH <= 30 + 15m confirmation")
     print("=" * 90)
 
-    stocks = load_stocks()
+    now=datetime.now(IST)
+    stocks=load_stocks()
+    state=load_monitoring_state()
+    full_hourly=hourly_cycle_due(state,now)
+    results=[]
 
-    print(
-        f"Stocks found: {len(stocks)}"
-    )
+    print(f"Current IST: {now:%Y-%m-%d %H:%M:%S}")
+    print(f"Master stocks: {len(stocks)}")
+    print(f"15m monitoring stocks: {len(monitoring_symbols(state))}")
+    print(f"Scan type: {'FULL HOURLY' if full_hourly else '15M MONITORING'}")
 
-    results = []
+    if full_hourly:
+        # Once per clock hour, calculate Weekly + Hourly RSI for ALL stocks.
+        for n,(_,row) in enumerate(stocks.iterrows(),1):
+            symbol=row["Symbol"]; tag=row.get("Tag","")
+            print(f"\n[{n}/{len(stocks)}] {symbol} [HOURLY]")
+            try:
+                result=process_stock(symbol,tag,check_15m=False)
+                if result is not None:
+                    results.append(result)
+                    state=update_monitoring_state(state,result,now)
+            except Exception as e:
+                print(f"  ERROR: {e}")
+            time.sleep(0.3)
 
-    for number, (_, stock_row) in enumerate(
-        stocks.iterrows(),
-        start=1,
-    ):
+        state=mark_hourly_check(state,now)
 
-        symbol = stock_row["Symbol"]
-        tag = stock_row.get("Tag", "")
+        # Immediately run 15m confirmation only for stocks that now qualify for monitoring.
+        monitored=monitoring_symbols(state)
+        monitored_rows=stocks[stocks["Symbol"].isin(monitored)]
+        result_map={str(r.get("Symbol","")).strip().upper():r for r in results}
+        for n,(_,row) in enumerate(monitored_rows.iterrows(),1):
+            symbol=row["Symbol"]; tag=row.get("Tag","")
+            print(f"\n[{n}/{len(monitored_rows)}] {symbol} [15M MONITOR]")
+            try:
+                result=process_stock(symbol,tag,check_15m=True)
+                if result is not None:
+                    result_map[symbol.upper()]=result
+                    state=update_monitoring_state(state,result,now)
+            except Exception as e:
+                print(f"  ERROR: {e}")
+            time.sleep(0.3)
+        results=list(result_map.values())
+    else:
+        # Between hourly scans, only monitored stocks are processed.
+        monitored=monitoring_symbols(state)
+        monitored_rows=stocks[stocks["Symbol"].isin(monitored)]
+        for n,(_,row) in enumerate(monitored_rows.iterrows(),1):
+            symbol=row["Symbol"]; tag=row.get("Tag","")
+            print(f"\n[{n}/{len(monitored_rows)}] {symbol} [15M MONITOR]")
+            try:
+                result=process_stock(symbol,tag,check_15m=True)
+                if result is not None:
+                    results.append(result)
+                    # Do not remove monitoring between hourly checkpoints.
+            except Exception as e:
+                print(f"  ERROR: {e}")
+            time.sleep(0.3)
+        state=mark_15m_check(state,monitored,now)
 
-        print(
-            f"\n[{number}/{len(stocks)}] "
-            f"{symbol}"
-        )
-
-        try:
-            result = process_stock(
-                symbol,
-                tag,
-            )
-
-            if result is not None:
-                results.append(result)
-
-        except Exception as error:
-            print(
-                f"  ❌ ERROR: {error}"
-            )
-
-        time.sleep(0.3)
+    save_monitoring_state(state)
 
     if not results:
-        print(
-            "\n❌ No results generated."
-        )
-        return 1
+        print("\nNo results generated.")
+        return 0
 
-    output = pd.DataFrame(results)
+    output=pd.DataFrame(results)
+    priority={"SETUP":1,"WATCH":2,"WAIT":3,"IGNORE":4}
+    output["_priority"]=output["Category"].map(priority).fillna(99)
+    output=output.sort_values(["_priority","Current Hourly RSI"],ascending=[True,True]).drop(columns=["_priority"]).reset_index(drop=True)
 
-    priority = {
-        "SETUP": 1,
-        "WATCH": 2,
-        "WAIT": 3,
-        "IGNORE": 4,
-    }
+    output.to_csv(OUTPUT_FILE,index=False,encoding="utf-8-sig")
+    save_latest_results(output)
 
-    output["_priority"] = (
-        output["Category"]
-        .map(priority)
-        .fillna(99)
-    )
+    try: save_rsi_history(results)
+    except Exception as e: print(f"  WARNING: RSI history update failed: {e}")
+    try: record_new_setups(results)
+    except Exception as e: print(f"  WARNING: Setup history update failed: {e}")
 
-    output = (
-        output.sort_values(
-            [
-                "_priority",
-                "Current Hourly RSI",
-            ],
-            ascending=[
-                True,
-                True,
-            ],
-        )
-        .drop(
-            columns=["_priority"]
-        )
-        .reset_index(drop=True)
-    )
-
-    # --------------------------------------------------------
-    # IMPORTANT:
-    # Save dashboard files BEFORE history.
-    # --------------------------------------------------------
-
-    output.to_csv(
-        OUTPUT_FILE,
-        index=False,
-        encoding="utf-8-sig",
-    )
-
-    print(
-        f"\nReport saved: "
-        f"{OUTPUT_FILE}"
-    )
-
-    save_latest_results(
-        output
-    )
-
-    # History is now safe because latest_results
-    # has already been written.
-    try:
-        save_rsi_history(
-            results
-        )
-    except Exception as error:
-        print(
-            "  ⚠️ RSI history update failed, "
-            f"but dashboard files are ready: {error}"
-        )
-
-    # ========================================================
-    # PHASE 5A — RECORD NEW SETUPS
-    # ========================================================
-
-    try:
-        record_new_setups(results)
-    except Exception as error:
-        print(
-            "  ⚠️ Setup history update failed, "
-            f"but scanner results are ready: {error}"
-        )
-
-    setup_count = int(
-        (
-            output["Category"]
-            == "SETUP"
-        ).sum()
-    )
-
-    watch_count = int(
-        (
-            output["Category"]
-            == "WATCH"
-        ).sum()
-    )
-
-    wait_count = int(
-        (
-            output["Category"]
-            == "WAIT"
-        ).sum()
-    )
-
-    ignore_count = int(
-        (
-            output["Category"]
-            == "IGNORE"
-        ).sum()
-    )
-
-    print("\n" + "=" * 90)
+    counts={c:int((output["Category"]==c).sum()) for c in ["SETUP","WATCH","WAIT","IGNORE"]}
+    print("\n"+"="*90)
     print("FINAL RSI SCANNER RESULT")
-    print("=" * 90)
-
-    columns = [
-        "Scan Time",
-        "Symbol",
-        "Current LTP",
-        "Current Week RSI",
-        "Previous Week RSI",
-        "Weekly RSI Change",
-        "Current Hour",
-        "Current Hourly RSI",
-        "Previous Hourly RSI",
-        "Hourly RSI Change",
-        "Hourly RSI Rising",
-        "Category",
-        "Signal",
-        "Reason",
-    ]
-
-    print(
-        output[columns]
-        .to_string(index=False)
-    )
-
-    print("\n" + "=" * 90)
-    print(
-        f"🔥 SETUP : {setup_count}"
-    )
-    print(
-        f"👀 WATCH : {watch_count}"
-    )
-    print(
-        f"⏳ WAIT  : {wait_count}"
-    )
-    print(
-        f"❌ IGNORE: {ignore_count}"
-    )
-
-    print(
-        f"\nReport saved: "
-        f"{OUTPUT_FILE}"
-    )
-
-    print(
-        f"Latest JSON: "
-        f"{LATEST_JSON_FILE}"
-    )
-
-    print(
-        f"History saved/appended: "
-        f"{HISTORY_FILE}"
-    )
-
-    print("=" * 90)
-
+    print("="*90)
+    cols=["Scan Time","Symbol","Current LTP","Current Week RSI","Current Hourly RSI","Hourly RSI Change","Hourly RSI Rising","Scan Mode","Monitoring Status","Category","Signal","Reason"]
+    print(output[[c for c in cols if c in output.columns]].to_string(index=False))
+    print("\n"+"="*90)
+    print(f"🔥 SETUP : {counts['SETUP']}")
+    print(f"👀 WATCH : {counts['WATCH']}")
+    print(f"⏳ WAIT  : {counts['WAIT']}")
+    print(f"❌ IGNORE: {counts['IGNORE']}")
+    print(f"🔴 15M MONITORING: {len(monitoring_symbols(state))}")
+    print(f"Scan Type: {'FULL HOURLY + 15M MONITORING' if full_hourly else '15M MONITORING'}")
+    print(f"Report: {OUTPUT_FILE}")
+    print(f"Latest JSON: {LATEST_JSON_FILE}")
+    print(f"Monitoring State: {MONITORING_STATE_FILE}")
+    print("="*90)
     return 0
 
 
