@@ -622,6 +622,41 @@ def main():
         if column not in history.columns:
             history[column] = ""
 
+    # --------------------------------------------------------
+    # Pandas 2.x dtype protection
+    # --------------------------------------------------------
+    # Setup_History.csv can contain completely blank outcome
+    # columns. Pandas may infer those columns as StringDtype.
+    # Phase 5B later writes numeric values such as 1.02 into
+    # Max Gain %, Max Loss %, and return columns. A StringDtype
+    # column rejects those float values. Convert numeric outcome
+    # columns to object so they can safely hold both blanks and
+    # numeric values during the row update.
+    # --------------------------------------------------------
+    NUMERIC_COLUMNS = [
+        "Entry Price",
+        "Setup Price",
+        "Weekly RSI",
+        "Hourly RSI At Setup",
+        "15m Confirmation Close",
+        "Previous 15m High",
+        "Current LTP",
+        "Current Return %",
+        "Max Gain %",
+        "Max Loss %",
+        "1D Return %",
+        "3D Return %",
+        "5D Return %",
+        "Days Since Setup",
+    ]
+
+    for column in NUMERIC_COLUMNS:
+        if column in history.columns:
+            history[column] = pd.to_numeric(
+                history[column],
+                errors="coerce",
+            ).astype(object)
+
     missing = [
         column
         for column in REQUIRED_COLUMNS
@@ -707,12 +742,19 @@ def main():
             instrument_key
         )
 
-        history.loc[index] = (
-            update_intraday_outcome(
-                history.loc[index].copy(),
-                intraday
-            )
+        updated_row = update_intraday_outcome(
+            history.loc[index].copy(),
+            intraday
         )
+
+        # Update cells individually instead of assigning the whole
+        # mixed-type Series back to the DataFrame. This avoids
+        # pandas StringDtype/object coercion errors.
+        for column in history.columns:
+            history.at[index, column] = updated_row.get(
+                column,
+                history.at[index, column]
+            )
 
         # ----------------------------------------------------
         # Daily 1D/3D/5D tracking
@@ -735,12 +777,16 @@ def main():
                 to_date
             )
 
-            history.loc[index] = (
-                update_daily_returns(
-                    history.loc[index].copy(),
-                    daily
-                )
+            updated_row = update_daily_returns(
+                history.loc[index].copy(),
+                daily
             )
+
+            for column in history.columns:
+                history.at[index, column] = updated_row.get(
+                    column,
+                    history.at[index, column]
+                )
 
         row = history.loc[index]
 
