@@ -3,23 +3,53 @@ name: RSI Trading System
 on:
   workflow_dispatch:
 
+  schedule:
+    # 09:15 IST = 03:45 UTC
+    - cron: "45 3 * * 1-5"
+
+    # Every 15 minutes from 09:30 IST through 15:15 IST
+    - cron: "*/15 4-9 * * 1-5"
+
+    # 15:30 IST = 10:00 UTC
+    - cron: "0 10 * * 1-5"
+
 permissions:
   contents: write
 
+concurrency:
+  group: rsi-trading-system
+  cancel-in-progress: false
+
 jobs:
+
   scanner:
+
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
     steps:
 
+      # ==========================================
+      # CHECKOUT
+      # ==========================================
+
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ==========================================
+      # PYTHON
+      # ==========================================
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      # ==========================================
+      # DEPENDENCIES
+      # ==========================================
 
       - name: Install dependencies
         run: |
@@ -29,67 +59,130 @@ jobs:
       # ==========================================
       # PHASE 4 - RSI SCANNER
       # ==========================================
+
       - name: Run RSI Scanner
         env:
           UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
           PYTHONIOENCODING: utf-8
           PYTHONUTF8: "1"
         run: |
+
           echo "=========================================="
           echo "PHASE 4 - RSI SCANNER"
           echo "=========================================="
+
+          echo "Current UTC:"
+          date -u
+
+          echo "Current IST:"
+          TZ=Asia/Kolkata date
+
+          echo ""
+          echo "Existing scanner state:"
+          echo "------------------------------------------"
+
+          if [ -f RSI_Scan_Cycle.json ]; then
+            cat RSI_Scan_Cycle.json
+          else
+            echo "No RSI_Scan_Cycle.json found."
+            echo "This run will perform the first FULL scan."
+          fi
+
+          echo ""
+
+          if [ -f RSI_Monitoring_State.csv ]; then
+            echo "Monitoring state found:"
+            wc -l RSI_Monitoring_State.csv
+          else
+            echo "No RSI_Monitoring_State.csv found."
+          fi
+
+          echo "------------------------------------------"
+
           python RSI_Scanner.py
 
       # ==========================================
       # PHASE 5B - OUTCOME TRACKING
       # ==========================================
+
       - name: Run Phase 5B Outcome Tracker
         env:
           UPSTOX_ACCESS_TOKEN: ${{ secrets.UPSTOX_ACCESS_TOKEN }}
           PYTHONIOENCODING: utf-8
           PYTHONUTF8: "1"
         run: |
+
           echo "=========================================="
           echo "PHASE 5B - OUTCOME TRACKER"
           echo "=========================================="
+
           python Phase5B_Outcome_Tracker.py
 
       # ==========================================
       # PHASE 6 - TRADING STATISTICS
       # ==========================================
+
       - name: Run Phase 6 Statistics
         run: |
+
           echo "=========================================="
           echo "PHASE 6 - TRADING STATISTICS"
           echo "=========================================="
+
           python Phase6_Trading_Statistics.py
 
       # ==========================================
-      # COMMIT RESULTS
+      # COMMIT ALL GENERATED OUTPUTS
       # ==========================================
+
       - name: Commit outputs
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           echo "=========================================="
           echo "ADDING OUTPUT FILES"
           echo "=========================================="
 
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Scanner output
           git add latest_results.csv
           git add latest_results.json
+
+          # RSI history
           git add RSI_History.csv
+
+          # NEW: Two-speed scanner state
+          git add RSI_Monitoring_State.csv
+          git add RSI_Scan_Cycle.json
+
+          # Setup history
           git add Setup_History.csv
+
+          # Statistics
           git add Trading_Statistics.csv
           git add Trading_Statistics_By_Tag.csv
 
+          echo ""
           echo "=========================================="
           echo "CHECKING FOR CHANGES"
           echo "=========================================="
 
+          git status
+
           if git diff --cached --quiet; then
+
+            echo ""
             echo "No changes to commit."
+
           else
+
+            echo ""
+            echo "Changes detected."
+            echo "Committing scanner state and outputs..."
+
             git commit -m "Update RSI trading system"
+
             git push
+
           fi
