@@ -1,5 +1,6 @@
 import sys
 import os
+import json
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -38,6 +39,7 @@ LATEST_JSON_FILE = SCRIPT_FOLDER / "latest_results.json"
 # Persistent history
 HISTORY_FILE = SCRIPT_FOLDER / "RSI_History.csv"
 MONITORING_STATE_FILE = SCRIPT_FOLDER / "RSI_Monitoring_State.csv"
+SCAN_CYCLE_FILE = SCRIPT_FOLDER / "RSI_Scan_Cycle.json"
 MONITORING_ENTRY_RSI = 50.0
 MONITORING_EXIT_RSI = 50.0
 
@@ -741,11 +743,53 @@ def monitoring_symbols(state):
     if state is None or state.empty: return set()
     return set(state["Symbol"].astype(str).str.strip().str.upper())
 
-def hourly_cycle_due(state, now):
-    if state is None or state.empty: return True
-    hour=now.strftime("%Y-%m-%d %H")
-    vals=state["Last Hourly Check"].fillna("").astype(str).str.strip()
-    return not vals.eq(hour).any()
+def get_last_hourly_cycle():
+    """Return the last completed full-universe hourly scan cycle."""
+    if not SCAN_CYCLE_FILE.exists():
+        return ""
+
+    try:
+        with open(SCAN_CYCLE_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        return str(data.get("last_hourly_cycle", "")).strip()
+
+    except Exception as error:
+        print(f"  WARNING: Could not read scan cycle file: {error}")
+        return ""
+
+
+def save_hourly_cycle(now=None):
+    """Record that the full stock universe has been scanned for this hour."""
+    if now is None:
+        now = datetime.now(IST)
+
+    cycle = now.strftime("%Y-%m-%d %H")
+
+    data = {
+        "last_hourly_cycle": cycle,
+        "updated_at": now.strftime("%Y-%m-%d %H:%M:%S"),
+    }
+
+    with open(SCAN_CYCLE_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
+    print(f"  HOURLY CYCLE SAVED: {cycle}")
+
+
+def hourly_cycle_due(now):
+    """
+    Return True only when this clock-hour has not had a full-universe scan.
+
+    IMPORTANT:
+    This is deliberately independent of RSI_Monitoring_State.csv.
+    Last Hourly Check in the monitoring state is stock-level information;
+    it must not be used to decide whether the whole universe is due.
+    """
+    current_cycle = now.strftime("%Y-%m-%d %H")
+    last_cycle = get_last_hourly_cycle()
+
+    return current_cycle != last_cycle
 
 def update_monitoring_state(state, result, now):
     if result is None: return state
@@ -772,11 +816,6 @@ def update_monitoring_state(state, result, now):
     elif idx:
         state=state.drop(index=idx).reset_index(drop=True)
         print(f"  EXITED 15M MONITORING: {symbol} | Hourly RSI {rsi:.2f}")
-    return state
-
-def mark_hourly_check(state, now):
-    if state is not None and not state.empty:
-        state=state.copy(); state["Last Hourly Check"]=now.strftime("%Y-%m-%d %H")
     return state
 
 def mark_15m_check(state, symbols, now):
@@ -1395,7 +1434,7 @@ def main():
     now=datetime.now(IST)
     stocks=load_stocks()
     state=load_monitoring_state()
-    full_hourly=hourly_cycle_due(state,now)
+    full_hourly=hourly_cycle_due(now)
     results=[]
 
     print(f"Current IST: {now:%Y-%m-%d %H:%M:%S}")
@@ -1417,7 +1456,7 @@ def main():
                 print(f"  ERROR: {e}")
             time.sleep(0.3)
 
-        state=mark_hourly_check(state,now)
+        save_hourly_cycle(now)
 
         # Immediately run 15m confirmation only for stocks that now qualify for monitoring.
         monitored=monitoring_symbols(state)
