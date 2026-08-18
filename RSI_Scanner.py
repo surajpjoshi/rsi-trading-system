@@ -720,24 +720,102 @@ def hourly_rsi_touched_30(symbol, current_hourly_rsi):
 MONITORING_COLUMNS = ["Symbol","Tag","Monitoring Status","Monitoring Started","Last Hourly RSI","Last Hourly Check","Last 15m Check"]
 
 def load_monitoring_state():
+    """
+    Load persistent 15-minute monitoring state.
+
+    CSV columns containing only blanks can be inferred by pandas as
+    float64. Timestamp fields must remain strings so later updates
+    cannot fail when assigning timestamps.
+    """
     if not MONITORING_STATE_FILE.exists():
         return pd.DataFrame(columns=MONITORING_COLUMNS)
+
     try:
-        s=pd.read_csv(MONITORING_STATE_FILE, encoding="utf-8-sig")
+        s = pd.read_csv(
+            MONITORING_STATE_FILE,
+            encoding="utf-8-sig",
+            dtype=str
+        )
+
         for c in MONITORING_COLUMNS:
-            if c not in s.columns: s[c]=""
-        s=s.reindex(columns=MONITORING_COLUMNS)
-        s["Symbol"]=s["Symbol"].fillna("").astype(str).str.strip().str.upper()
-        return s[s["Symbol"]!=""].drop_duplicates("Symbol",keep="last").reset_index(drop=True)
+            if c not in s.columns:
+                s[c] = ""
+
+        s = s.reindex(columns=MONITORING_COLUMNS)
+
+        s["Symbol"] = (
+            s["Symbol"]
+            .fillna("")
+            .astype(str)
+            .str.strip()
+            .str.upper()
+        )
+
+        text_columns = [
+            "Tag",
+            "Monitoring Status",
+            "Monitoring Started",
+            "Last Hourly Check",
+            "Last 15m Check",
+        ]
+
+        for c in text_columns:
+            s[c] = s[c].fillna("").astype(str)
+
+        s["Last Hourly RSI"] = pd.to_numeric(
+            s["Last Hourly RSI"],
+            errors="coerce"
+        )
+
+        return (
+            s[s["Symbol"] != ""]
+            .drop_duplicates("Symbol", keep="last")
+            .reset_index(drop=True)
+        )
+
     except Exception as e:
         print(f"  WARNING: Could not read monitoring state: {e}")
         return pd.DataFrame(columns=MONITORING_COLUMNS)
 
+
 def save_monitoring_state(state):
-    if state is None: state=pd.DataFrame(columns=MONITORING_COLUMNS)
+    """
+    Save monitoring state with stable CSV data types.
+    """
+    if state is None:
+        state = pd.DataFrame(columns=MONITORING_COLUMNS)
+
+    state = state.copy()
+
     for c in MONITORING_COLUMNS:
-        if c not in state.columns: state[c]=""
-    state.reindex(columns=MONITORING_COLUMNS).to_csv(MONITORING_STATE_FILE,index=False,encoding="utf-8-sig")
+        if c not in state.columns:
+            state[c] = ""
+
+    state = state.reindex(columns=MONITORING_COLUMNS)
+
+    text_columns = [
+        "Symbol",
+        "Tag",
+        "Monitoring Status",
+        "Monitoring Started",
+        "Last Hourly Check",
+        "Last 15m Check",
+    ]
+
+    for c in text_columns:
+        state[c] = state[c].fillna("").astype(str)
+
+    state["Last Hourly RSI"] = pd.to_numeric(
+        state["Last Hourly RSI"],
+        errors="coerce"
+    )
+
+    state.to_csv(
+        MONITORING_STATE_FILE,
+        index=False,
+        encoding="utf-8-sig"
+    )
+
 
 def monitoring_symbols(state):
     if state is None or state.empty: return set()
@@ -819,10 +897,43 @@ def update_monitoring_state(state, result, now):
     return state
 
 def mark_15m_check(state, symbols, now):
-    if state is None or state.empty: return state
-    state=state.copy(); syms={str(x).strip().upper() for x in symbols}
-    mask=state["Symbol"].astype(str).str.strip().str.upper().isin(syms)
-    state.loc[mask,"Last 15m Check"]=now.strftime("%Y-%m-%d %H:%M:%S")
+    """
+    Mark monitored stocks as checked by the 15-minute scan.
+
+    Explicitly convert the timestamp column to string before assignment.
+    This prevents pandas dtype errors when an all-blank CSV column was
+    previously inferred as float64.
+    """
+    if state is None or state.empty:
+        return state
+
+    state = state.copy()
+
+    for c in MONITORING_COLUMNS:
+        if c not in state.columns:
+            state[c] = ""
+
+    state["Last 15m Check"] = (
+        state["Last 15m Check"]
+        .fillna("")
+        .astype(str)
+    )
+
+    state["Symbol"] = (
+        state["Symbol"]
+        .fillna("")
+        .astype(str)
+        .str.strip()
+        .str.upper()
+    )
+
+    syms = {str(x).strip().upper() for x in symbols}
+    mask = state["Symbol"].isin(syms)
+
+    timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
+
+    state.loc[mask, "Last 15m Check"] = timestamp
+
     return state
 
 # SIGNAL LOGIC
