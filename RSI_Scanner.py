@@ -877,9 +877,17 @@ def update_monitoring_state(state, result, now):
     if state is None: state=pd.DataFrame(columns=MONITORING_COLUMNS)
     state=state.copy()
     for c in MONITORING_COLUMNS:
-        if c not in state.columns: state[c]=""
+        if c not in state.columns:
+            state[c]=""
     state=state.reindex(columns=MONITORING_COLUMNS)
-    state["Symbol"]=state["Symbol"].fillna("").astype(str).str.strip().str.upper()
+
+    # Keep text/timestamp columns as strings.  This is important on
+    # GitHub Actions because pandas can infer blank CSV columns as float64.
+    for c in ["Symbol","Tag","Monitoring Status","Monitoring Started",
+              "Last Hourly Check","Last 15m Check"]:
+        state[c]=state[c].fillna("").astype(str)
+
+    state["Symbol"]=state["Symbol"].str.strip().str.upper()
     idx=state.index[state["Symbol"]==symbol].tolist()
     stamp=now.strftime("%Y-%m-%d %H:%M:%S")
     if rsi < MONITORING_ENTRY_RSI:
