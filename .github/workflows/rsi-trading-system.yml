@@ -16,6 +16,7 @@ on:
 permissions:
   contents: write
 
+# Prevent two RSI workflows from modifying the repository simultaneously.
 concurrency:
   group: rsi-trading-system
   cancel-in-progress: false
@@ -36,6 +37,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       # ==========================================
@@ -78,10 +80,12 @@ jobs:
           TZ=Asia/Kolkata date
 
           echo ""
-          echo "Existing scanner state:"
-          echo "------------------------------------------"
+          echo "=========================================="
+          echo "EXISTING SCANNER STATE"
+          echo "=========================================="
 
           if [ -f RSI_Scan_Cycle.json ]; then
+            echo "RSI_Scan_Cycle.json:"
             cat RSI_Scan_Cycle.json
           else
             echo "No RSI_Scan_Cycle.json found."
@@ -91,13 +95,16 @@ jobs:
           echo ""
 
           if [ -f RSI_Monitoring_State.csv ]; then
-            echo "Monitoring state found:"
+            echo "Monitoring state:"
             wc -l RSI_Monitoring_State.csv
+            echo ""
+            head -10 RSI_Monitoring_State.csv
           else
             echo "No RSI_Monitoring_State.csv found."
           fi
 
-          echo "------------------------------------------"
+          echo ""
+          echo "=========================================="
 
           python RSI_Scanner.py
 
@@ -152,7 +159,7 @@ jobs:
           # RSI history
           git add RSI_History.csv
 
-          # NEW: Two-speed scanner state
+          # Two-speed scanner state
           git add RSI_Monitoring_State.csv
           git add RSI_Scan_Cycle.json
 
@@ -183,6 +190,18 @@ jobs:
 
             git commit -m "Update RSI trading system"
 
-            git push
+            echo ""
+            echo "=========================================="
+            echo "SYNCING WITH REMOTE"
+            echo "=========================================="
+
+            git pull --rebase origin main
+
+            echo ""
+            echo "=========================================="
+            echo "PUSHING UPDATED OUTPUTS"
+            echo "=========================================="
+
+            git push origin main
 
           fi
