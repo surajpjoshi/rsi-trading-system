@@ -19,7 +19,6 @@ input,select,button{background:#0b152b;color:var(--t);border:1px solid var(--b);
 .queue-row{display:grid;grid-template-columns:1.5fr .8fr .8fr .8fr 1fr;gap:8px;align-items:center;padding:10px;border-bottom:1px solid #273555}.queue-row:last-child{border-bottom:0}.ready{color:var(--g);font-weight:800}.near{color:var(--y);font-weight:800}
 .table{overflow:auto}table{width:100%;border-collapse:collapse;min-width:950px}th,td{padding:9px;border-bottom:1px solid #273555;white-space:nowrap;text-align:left}th{background:#182542;color:#afbedc;font-size:12px;position:sticky;top:0}tr:hover td{background:#12203a}
 a.sym{color:#42e5ff;font-weight:800;text-decoration:none}.badge{padding:4px 8px;border-radius:99px;font-size:11px;font-weight:800}.setup{color:var(--g);background:#39e6a51c}.watch{color:var(--y);background:#ffc8571c}.wait{color:var(--bl);background:#78a6ff1c}.ignore{color:var(--r);background:#ff64731c}.active{color:var(--g);background:#39e6a51c}.complete{color:var(--bl);background:#78a6ff1c}.empty{text-align:center;color:var(--m);padding:28px}.err{color:var(--r);padding:15px}.note{color:var(--m);font-size:12px}.footer{text-align:center;color:#7181a4;font-size:12px;padding:14px}
-.monitor-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.pipeline{display:grid;grid-template-columns:repeat(11,1fr);gap:6px}.pipe{background:var(--p2);border:1px solid #26365b;border-radius:10px;padding:12px;text-align:center}.pipe .num{font-size:24px;font-weight:850}.pipe small{display:block;color:var(--m)}.arrow{display:flex;align-items:center;justify-content:center;color:var(--m)}.mode-full{color:var(--g);background:#39e6a51c}.mode-monitor{color:var(--c);background:#38d9ff1c}.decision-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}.small-table{max-height:430px;overflow:auto}
 @media(max-width:1150px){.cards{grid-template-columns:repeat(3,1fr)}.decision,.grid2{grid-template-columns:1fr}}@media(max-width:700px){.wrap{padding:9px}.cards,.mini,.grid3,.checklist{grid-template-columns:1fr 1fr}.levels{grid-template-columns:repeat(4,1fr)}header{display:block}.status{margin-top:10px}.queue-row{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -31,21 +30,7 @@ a.sym{color:#42e5ff;font-weight:800;text-decoration:none}.badge{padding:4px 8px;
 </header>
 
 <div class="cards">
-<div class="card"><div class="label">📊 MASTER STOCKS</div><div id="masterStocks" class="value">—</div></div>
-<div class="card"><div class="label">🔴 15M MONITORING</div><div id="monitoringStocks" class="value c">—</div></div>
 <div class="card"><div class="label">🔥 SETUPS</div><div id="setups" class="value g">—</div></div>
-<div class="card"><div class="label">👀 WATCH</div><div id="watch" class="value y">—</div></div>
-<div class="card"><div class="label">⏳ WAIT</div><div id="wait" class="value bl">—</div></div>
-<div class="card"><div class="label">❌ IGNORE</div><div id="ignore" class="value r">—</div></div>
-</div>
-<div class="cards" style="margin-top:10px">
-<div class="card"><div class="label">📌 ACTIVE SETUPS</div><div id="active" class="value c">—</div></div>
-<div class="card"><div class="label">✅ COMPLETED</div><div id="completed" class="value bl">—</div></div>
-<div class="card"><div class="label">🔄 SCAN MODE</div><div id="scanMode" class="value" style="font-size:18px">—</div></div>
-<div class="card"><div class="label">🕐 LAST FULL SCAN</div><div id="lastFullScan" class="value" style="font-size:17px">—</div></div>
-<div class="card"><div class="label">⏱ LAST 15M CHECK</div><div id="last15mCheck" class="value" style="font-size:17px">—</div></div>
-<div class="card"><div class="label">🎯 HIGH PRIORITY</div><div id="highPriority" class="value y">—</div></div>
-</div>
 <div class="card"><div class="label">👀 WATCH</div><div id="watch" class="value y">—</div></div>
 <div class="card"><div class="label">⏳ WAIT</div><div id="wait" class="value bl">—</div></div>
 <div class="card"><div class="label">❌ IGNORE</div><div id="ignore" class="value r">—</div></div>
@@ -55,24 +40,14 @@ a.sym{color:#42e5ff;font-weight:800;text-decoration:none}.badge{padding:4px 8px;
 
 <div class="tabs">
 <button class="tab on" data-s="overview">Decision Center</button>
-<button class="tab" data-s="scanner">Live Scanner</button><button class="tab" data-s="monitor">🔴 15M Monitoring</button>
+<button class="tab" data-s="scanner">Live Scanner</button>
 <button class="tab" data-s="activeTab">Active Setups</button>
 <button class="tab" data-s="history">Setup History</button>
 <button class="tab" data-s="stats">Statistics</button>
-<button class="tab" data-s="tags">Tag Performance</button>
+<button class="tab" data-s="tags">Tag Performance</button><button class="tab" data-s="allStocks">All Stocks</button>
 </div>
 
 <section id="overview" class="sec on">
-<div class="panel"><div class="head"><div class="title">🎯 RSI Setup Pipeline</div><div id="pipelineMode"></div></div>
-<div class="pipeline">
-<div class="pipe"><div id="pMaster" class="num">—</div><small>Master Stocks</small></div><div class="arrow">→</div>
-<div class="pipe"><div id="pWeekly" class="num g">—</div><small>Weekly RSI &gt; 50</small></div><div class="arrow">→</div>
-<div class="pipe"><div id="pMonitor" class="num c">—</div><small>15M Monitoring</small></div><div class="arrow">→</div>
-<div class="pipe"><div id="pTouch" class="num y">—</div><small>Hourly RSI ≤ 30</small></div><div class="arrow">→</div>
-<div class="pipe"><div id="pConfirm" class="num g">—</div><small>15M Confirmed</small></div><div class="arrow">→</div>
-<div class="pipe"><div id="pSetup" class="num g">—</div><small>🔥 SETUP</small></div>
-</div></div>
-
 <div class="decision">
 <div id="decisionCards"></div>
 <div>
@@ -101,12 +76,6 @@ a.sym{color:#42e5ff;font-weight:800;text-decoration:none}.badge{padding:4px 8px;
 
 <section id="scanner" class="sec"><div class="panel"><div class="head"><div class="title">Live Scanner</div><div class="controls"><input id="sq" placeholder="Search symbol/tag" oninput="scanner()"><select id="sf" onchange="scanner()"><option value="">All</option><option>SETUP</option><option>WATCH</option><option>WAIT</option><option>IGNORE</option></select><button onclick="load()">Refresh</button></div></div><div id="st" class="table"></div></div></section>
 
-<section id="monitor" class="sec">
-<div class="panel"><div class="head"><div><div class="title">🔴 15-Minute Monitoring Queue</div><div class="note">Current contents of RSI_Monitoring_State.csv. These stocks receive 15-minute checks between hourly scans.</div></div>
-<div class="controls"><input id="mq" placeholder="Search symbol/tag" oninput="monitorTable()"><button onclick="load()">Refresh</button></div></div>
-<div id="monitorStats" class="decision-summary"></div><div id="mt" class="table"></div></div>
-</section>
-
 <section id="activeTab" class="sec"><div class="panel"><div class="head"><div class="title">📌 Active Setups</div></div><div id="at" class="table"></div></div></section>
 
 <section id="history" class="sec"><div class="panel"><div class="head"><div class="title">Setup History + Outcomes</div><div class="controls"><input id="hq" placeholder="Search symbol/tag" oninput="history()"><select id="hf" onchange="history()"><option value="">All</option><option>ACTIVE</option><option>COMPLETED</option></select></div></div><div id="ht" class="table"></div></div></section>
@@ -115,12 +84,29 @@ a.sym{color:#42e5ff;font-weight:800;text-decoration:none}.badge{padding:4px 8px;
 
 <section id="tags" class="sec"><div class="panel"><div class="head"><div class="title">Performance by Tag</div></div><div id="tag" class="table"></div></div></section>
 
-<div class="footer">Decision layer reads scanner, monitoring-state, outcome and statistics files. Auto-refresh: 5 minutes.</div>
+<section id="allStocks" class="sec">
+<div class="panel">
+<div class="head">
+  <div>
+    <div class="title">📋 All Stocks</div>
+    <div class="note">All stocks pushed from Google Sheets, with the latest scan time available for each stock.</div>
+  </div>
+  <div class="controls">
+    <input id="allq" placeholder="Search stock" oninput="allStocks()">
+    <button onclick="load()">Refresh</button>
+  </div>
+</div>
+<div id="allStocksSummary" class="note" style="margin-bottom:10px"></div>
+<div id="allStocksTable" class="table"></div>
+</div>
+</section>
+
+<div class="footer">Decision layer reads the existing CSV outputs only. Auto-refresh: 5 minutes.</div>
 </div>
 
 <script>
-const D={latest:[],history:[],stats:[],tags:[],monitor:[],cycle:null};
-const F={latest:'latest_results.csv',history:'Setup_History.csv',stats:'Trading_Statistics.csv',tags:'Trading_Statistics_By_Tag.csv',monitor:'RSI_Monitoring_State.csv',cycle:'RSI_Scan_Cycle.json'};
+const D={latest:[],history:[],stats:[],tags:[]};
+const F={latest:'latest_results.csv',history:'Setup_History.csv',stats:'Trading_Statistics.csv',tags:'Trading_Statistics_By_Tag.csv'};
 
 function csv(t){let R=[],r=[],f='',q=0;for(let i=0;i<t.length;i++){let c=t[i],n=t[i+1];if(c=='"'){if(q&&n=='"'){f+='"';i++}else q=!q}else if(c==','&&!q){r.push(f);f=''}else if((c=='\n'||c=='\r')&&!q){if(c=='\r'&&n=='\n')i++;r.push(f);f='';if(r.some(x=>x.trim()))R.push(r);r=[]}else f+=c}if(f||r.length){r.push(f);if(r.some(x=>x.trim()))R.push(r)}if(!R.length)return[];let h=R[0].map(x=>x.trim().replace(/^\uFEFF/,''));return R.slice(1).map(x=>Object.fromEntries(h.map((k,i)=>[k,(x[i]||'').trim()])));}
 async function get(f){let r=await fetch(f+'?v='+Date.now());if(!r.ok)throw Error(f+' HTTP '+r.status);return csv(await r.text())}
@@ -134,10 +120,6 @@ function SB(s){let x=String(s||'').toUpperCase();return '<span class="badge '+(x
 function T(r){return r.Tag||r.Category||'—'}
 function set(i,v){document.getElementById(i).textContent=v}
 
-function modeBadge(mode){let x=String(mode||'').toUpperCase();if(x.includes('15M'))return '<span class="badge mode-monitor">🔴 15M MONITORING</span>';if(x.includes('HOURLY'))return '<span class="badge mode-full">🔄 FULL HOURLY</span>';return '<span class="badge">—</span>'}
-function monitorRow(r){return '<tr><td>'+L(r.Symbol)+'</td><td>'+E(r.Tag||'—')+'</td><td>'+N(r['Last Hourly RSI'])+'</td><td>'+E(r['Monitoring Started']||'—')+'</td><td>'+E(r['Last 15m Check']||'—')+'</td><td>'+SB(r['Monitoring Status']||'MONITORING')+'</td></tr>'}
-function monitorTable(){let q=(document.getElementById('mq')?.value||'').toLowerCase();let a=D.monitor.filter(r=>(String(r.Symbol)+' '+String(r.Tag)).toLowerCase().includes(q));document.getElementById('mt').innerHTML=a.length?'<table><thead><tr><th>Symbol</th><th>Tag</th><th>Hourly RSI</th><th>Monitoring Started</th><th>Last 15m Check</th><th>Status</th></tr></thead><tbody>'+a.map(monitorRow).join('')+'</tbody></table>':'<div class="empty">No stocks currently in 15M monitoring.</div>'}
-async function loadMonitoring(){try{D.monitor=await get(F.monitor);D.cycle=await fetch(F.cycle+'?v='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null);let c=D.monitor.length;set('monitoringStocks',c);set('masterStocks',D.latest.length);set('lastFullScan',D.cycle?.last_hourly_cycle||'—');set('last15mCheck',D.monitor.map(r=>r['Last 15m Check']).filter(Boolean).sort().at(-1)||'—');let mode=D.latest.map(r=>r['Scan Mode']).find(Boolean)||'—';document.getElementById('scanMode').innerHTML=modeBadge(mode);document.getElementById('pipelineMode').innerHTML=modeBadge(mode);set('pMaster',D.latest.length);set('pWeekly',D.latest.filter(r=>n(r['Current Week RSI'])>50).length);set('pMonitor',c);set('pTouch',D.latest.filter(r=>n(r['Current Hourly RSI'])!==null&&n(r['Current Hourly RSI'])<=30).length);set('pConfirm',D.latest.filter(r=>n(r['15m Close'])!==null&&n(r['Previous 15m High'])!==null&&n(r['15m Close'])>n(r['Previous 15m High'])).length);set('pSetup',D.latest.filter(r=>String(r.Signal||'').toUpperCase().includes('SETUP')).length);set('highPriority',D.latest.filter(r=>n(r['Current Week RSI'])>50&&n(r['Current Hourly RSI'])<40).length);document.getElementById('monitorStats').innerHTML='<div class="metric"><span class="muted">Monitoring</span><b>'+c+'</b></div><div class="metric"><span class="muted">Hourly RSI &lt; 50</span><b class="c">'+c+'</b></div><div class="metric"><span class="muted">Last 15m Check</span><b>'+E(D.monitor.map(r=>r['Last 15m Check']).filter(Boolean).sort().at(-1)||'—')+'</b></div><div class="metric"><span class="muted">Scan Mode</span><b class="c">'+E(mode)+'</b></div>';document.getElementById('mt').innerHTML=c?'<table><thead><tr><th>Symbol</th><th>Tag</th><th>Hourly RSI</th><th>Monitoring Started</th><th>Last 15m Check</th><th>Status</th></tr></thead><tbody>'+D.monitor.map(monitorRow).join('')+'</tbody></table>':'<div class="empty">No stocks currently in 15M monitoring.</div>';monitorTable()}catch(e){document.getElementById('mt').innerHTML='<div class="err">Monitoring state unavailable: '+E(e.message)+'</div>'}}
 function setupTable(a){
 if(!a.length)return'<div class="empty">No setup records.</div>';
 return '<table><thead><tr><th>Setup Time</th><th>Symbol</th><th>Tag</th><th>Entry</th><th>Weekly RSI</th><th>Hourly RSI</th><th>15m Confirmation</th><th>15m Close</th><th>Prev 15m High</th><th>Status</th><th>Max Gain</th><th>Max Loss</th><th>1D</th><th>3D</th><th>5D</th></tr></thead><tbody>'+
@@ -202,6 +184,49 @@ if(!D.tags.length){document.getElementById('tag').innerHTML='<div class="empty">
 let c=Object.keys(D.tags[0]);document.getElementById('tag').innerHTML='<table><thead><tr>'+c.map(x=>'<th>'+E(x)+'</th>').join('')+'</tr></thead><tbody>'+D.tags.map(r=>'<tr>'+c.map(x=>'<td>'+((x.includes('Rate')||x.includes('Return')||x.includes('Gain')||x.includes('Loss'))?(n(r.Completed)?P(r[x]):'—'):E(r[x]))+'</td>').join('')+'</tr>').join('')+'</tbody></table>'
 }
 
+function allStocks(){
+  let q=(document.getElementById('allq')?.value||'').toLowerCase();
+
+  // latest_results.csv contains the complete stock list pushed by the scanner.
+  // Keep one row per symbol and show its most recent Scan Time.
+  let map=new Map();
+
+  D.latest.forEach(r=>{
+    let symbol=String(r.Symbol||'').trim();
+    if(!symbol) return;
+
+    let old=map.get(symbol);
+    let scan=String(r['Scan Time']||'').trim();
+
+    if(!old || scan>String(old['Scan Time']||'')){
+      map.set(symbol,r);
+    }
+  });
+
+  let a=[...map.values()]
+    .filter(r=>String(r.Symbol||'').toLowerCase().includes(q))
+    .sort((x,y)=>String(x.Symbol||'').localeCompare(String(y.Symbol||'')));
+
+  document.getElementById('allStocksSummary').textContent=
+    'Total stocks: '+a.length+' | Source: latest_results.csv';
+
+  document.getElementById('allStocksTable').innerHTML=a.length
+    ? '<table><thead><tr>'+
+      '<th>#</th><th>Symbol</th><th>Tag</th><th>Last Scan Time</th><th>Signal</th>'+
+      '</tr></thead><tbody>'+
+      a.map((r,i)=>
+        '<tr>'+
+        '<td>'+(i+1)+'</td>'+
+        '<td>'+L(r.Symbol)+'</td>'+
+        '<td>'+E(T(r))+'</td>'+
+        '<td>'+E(r['Scan Time']||'—')+'</td>'+
+        '<td>'+B(r.Signal||'—')+'</td>'+
+        '</tr>'
+      ).join('')+
+      '</tbody></table>'
+    : '<div class="empty">No stocks found.</div>';
+}
+
 async function load(){
 set('status','LOADING');
 try{
@@ -209,7 +234,7 @@ try{
 set('status','LIVE');set('scan',D.latest.map(x=>x['Scan Time']).filter(Boolean).sort().at(-1)||'—');set('updated',new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}));
 let c={SETUP:0,WATCH:0,WAIT:0,IGNORE:0};D.latest.forEach(r=>{let s=String(r.Signal||'').toUpperCase();if(s.includes('SETUP'))c.SETUP++;else if(s.includes('WATCH'))c.WATCH++;else if(s.includes('WAIT'))c.WAIT++;else if(s.includes('IGNORE'))c.IGNORE++});
 set('setups',c.SETUP);set('watch',c.WATCH);set('wait',c.WAIT);set('ignore',c.IGNORE);set('active',D.history.filter(r=>String(r.Status).toUpperCase()==='ACTIVE').length);set('completed',D.history.filter(r=>String(r.Status).toUpperCase()==='COMPLETED').length);
-decisionCenter();scanner();history();stats();tags();
+decisionCenter();scanner();history();stats();tags();allStocks();
 document.getElementById('at').innerHTML=setupTable(D.history.filter(r=>String(r.Status).toUpperCase()==='ACTIVE'));
 let ss=D.latest.filter(r=>String(r.Signal).toUpperCase().includes('SETUP'));
 document.getElementById('ov').innerHTML=ss.length?'<div class="table"><table><thead><tr><th>Symbol</th><th>Tag</th><th>LTP</th><th>Weekly RSI</th><th>Hourly RSI</th><th>Signal</th><th>Reason</th></tr></thead><tbody>'+ss.map(r=>'<tr><td>'+L(r.Symbol)+'</td><td>'+E(T(r))+'</td><td>₹'+N(r['Current LTP'])+'</td><td>'+N(r['Current Week RSI'])+'</td><td>'+N(r['Current Hourly RSI'])+'</td><td>'+B(r.Signal)+'</td><td>'+E(r.Reason)+'</td></tr>').join('')+'</tbody></table></div>':'<div class="empty">No SETUP signals in latest scan.</div>';
@@ -218,7 +243,7 @@ document.getElementById('ovh').innerHTML=setupTable([...D.history].sort((a,b)=>S
 }
 
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));document.querySelectorAll('.sec').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.s).classList.add('on')});
-load();setTimeout(loadMonitoring,700);setInterval(load,300000);setInterval(loadMonitoring,300000);
+load();setInterval(load,300000);
 </script>
 </body>
 </html>
