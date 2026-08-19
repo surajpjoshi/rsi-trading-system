@@ -101,12 +101,12 @@ a.sym{color:#42e5ff;font-weight:800;text-decoration:none}.badge{padding:4px 8px;
 </div>
 </section>
 
-<div class="footer">Decision layer reads the existing CSV outputs only. Auto-refresh: 5 minutes.</div>
+<div class="footer">Decision layer reads the existing scanner outputs plus the Google Sheets master stock list. Auto-refresh: 5 minutes.</div>
 </div>
 
 <script>
-const D={latest:[],history:[],stats:[],tags:[]};
-const F={latest:'latest_results.csv',history:'Setup_History.csv',stats:'Trading_Statistics.csv',tags:'Trading_Statistics_By_Tag.csv'};
+const D={latest:[],history:[],stats:[],tags:[],master:[],monitor:[],cycle:null};
+const F={latest:'latest_results.csv',history:'Setup_History.csv',stats:'Trading_Statistics.csv',tags:'Trading_Statistics_By_Tag.csv',master:'My-Stocks.csv',monitor:'RSI_Monitoring_State.csv',cycle:'RSI_Scan_Cycle.json'};
 
 function csv(t){let R=[],r=[],f='',q=0;for(let i=0;i<t.length;i++){let c=t[i],n=t[i+1];if(c=='"'){if(q&&n=='"'){f+='"';i++}else q=!q}else if(c==','&&!q){r.push(f);f=''}else if((c=='\n'||c=='\r')&&!q){if(c=='\r'&&n=='\n')i++;r.push(f);f='';if(r.some(x=>x.trim()))R.push(r);r=[]}else f+=c}if(f||r.length){r.push(f);if(r.some(x=>x.trim()))R.push(r)}if(!R.length)return[];let h=R[0].map(x=>x.trim().replace(/^\uFEFF/,''));return R.slice(1).map(x=>Object.fromEntries(h.map((k,i)=>[k,(x[i]||'').trim()])));}
 async function get(f){let r=await fetch(f+'?v='+Date.now());if(!r.ok)throw Error(f+' HTTP '+r.status);return csv(await r.text())}
@@ -187,50 +187,121 @@ let c=Object.keys(D.tags[0]);document.getElementById('tag').innerHTML='<table><t
 function allStocks(){
   let q=(document.getElementById('allq')?.value||'').toLowerCase();
 
-  // latest_results.csv contains the complete stock list pushed by the scanner.
-  // Keep one row per symbol and show its most recent Scan Time.
-  let map=new Map();
+  /*
+   * ALL STOCKS = master Google-Sheet universe.
+   *
+   * My-Stocks.csv is the complete stock list pushed from Google Sheets.
+   * latest_results.csv only contains stocks processed in the latest scan,
+   * so it must NOT be used as the master universe.
+   *
+   * latest_results + RSI_Monitoring_State are joined onto the master list
+   * to show the most recent activity for every stock.
+   */
 
+  let latestMap=new Map();
   D.latest.forEach(r=>{
     let symbol=String(r.Symbol||'').trim();
-    if(!symbol) return;
-
-    let old=map.get(symbol);
+    if(!symbol)return;
+    let old=latestMap.get(symbol);
     let scan=String(r['Scan Time']||'').trim();
-
-    if(!old || scan>String(old['Scan Time']||'')){
-      map.set(symbol,r);
-    }
+    if(!old || scan>String(old['Scan Time']||'')) latestMap.set(symbol,r);
   });
 
-  let a=[...map.values()]
-    .filter(r=>String(r.Symbol||'').toLowerCase().includes(q))
-    .sort((x,y)=>String(x.Symbol||'').localeCompare(String(y.Symbol||'')));
+  let monitorMap=new Map();
+  D.monitor.forEach(r=>{
+    let symbol=String(r.Symbol||'').trim();
+    if(symbol) monitorMap.set(symbol,r);
+  });
 
-  document.getElementById('allStocksSummary').textContent=
-    'Total stocks: '+a.length+' | Source: latest_results.csv';
+  let a=D.master.map((m,i)=>{
+    let symbol=String(
+      m.Symbol || m.symbol || m.Stock || m.StockSymbol ||
+      m['Stock Symbol'] || m['NSE Symbol'] || m['Trading Symbol'] || ''
+    ).trim();
+
+    // Support a simple one-column My-Stocks.csv if no Symbol header exists.
+    if(!symbol && Object.keys(m).length===1) symbol=String(Object.values(m)[0]||'').trim();
+    if(!symbol)return null;
+
+    let lr=latestMap.get(symbol)||{};
+    let mr=monitorMap.get(symbol)||{};
+
+    let latestTime=String(lr['Scan Time']||'').trim();
+    let monitorTime=String(
+      mr['Last 15m Check'] || mr['Last Scan Time'] || mr['Monitoring Started'] || ''
+    ).trim();
+
+    let lastScan=latestTime;
+    let mode='NOT SCANNED';
+
+    if(monitorTime && (!latestTime || monitorTime>latestTime)){
+      lastScan=monitorTime;
+      mode='🔴 15M';
+    }else if(latestTime){
+      mode=String(lr['Scan Mode']||'').toUpperCase().includes('15M')
+        ? '🔴 15M'
+        : '🔄 HOURLY';
+    }
+
+    return {
+      no:i+1,
+      Symbol:symbol,
+      Tag:T(lr)||m.Tag||m.Category||m.tag||m.Category||'—',
+      ScanMode:mode,
+      LastScan:lastScan||'—',
+      Signal:lr.Signal||'—',
+      HourlyRSI:lr['Current Hourly RSI']||'—',
+      MonitorStatus:mr['Monitoring Status']||'—'
+    };
+  }).filter(Boolean);
+
+  a=a.filter(r=>r.Symbol.toLowerCase().includes(q))
+     .sort((x,y)=>x.Symbol.localeCompare(y.Symbol));
+
+  let hourly=a.filter(r=>r.ScanMode==='🔄 HOURLY').length;
+  let m15=a.filter(r=>r.ScanMode==='🔴 15M').length;
+  let notScanned=a.filter(r=>r.ScanMode==='NOT SCANNED').length;
+
+  document.getElementById('allStocksSummary').innerHTML=
+    '<b>Total master stocks: '+a.length+'</b>'+
+    ' &nbsp;|&nbsp; 🔄 Hourly: '+hourly+
+    ' &nbsp;|&nbsp; 🔴 15M: '+m15+
+    ' &nbsp;|&nbsp; ⚪ Not scanned yet: '+notScanned+
+    '<br><span class="note">Source: My-Stocks.csv (Google Sheets master list) + latest_results.csv + RSI_Monitoring_State.csv</span>';
 
   document.getElementById('allStocksTable').innerHTML=a.length
     ? '<table><thead><tr>'+
-      '<th>#</th><th>Symbol</th><th>Tag</th><th>Last Scan Time</th><th>Signal</th>'+
+      '<th>#</th><th>Symbol</th><th>Tag</th><th>Scan Mode</th><th>Last Scan Time</th><th>Hourly RSI</th><th>Monitoring</th><th>Signal</th>'+
       '</tr></thead><tbody>'+
       a.map((r,i)=>
         '<tr>'+
         '<td>'+(i+1)+'</td>'+
         '<td>'+L(r.Symbol)+'</td>'+
-        '<td>'+E(T(r))+'</td>'+
-        '<td>'+E(r['Scan Time']||'—')+'</td>'+
-        '<td>'+B(r.Signal||'—')+'</td>'+
+        '<td>'+E(r.Tag)+'</td>'+
+        '<td>'+(
+          r.ScanMode==='🔄 HOURLY'
+          ? '<span class="badge active">🔄 HOURLY</span>'
+          : r.ScanMode==='🔴 15M'
+          ? '<span class="badge watch">🔴 15M</span>'
+          : '<span class="badge wait">⚪ NOT SCANNED</span>'
+        )+'</td>'+
+        '<td>'+E(r.LastScan)+'</td>'+
+        '<td>'+N(r.HourlyRSI)+'</td>'+
+        '<td>'+E(r.MonitorStatus)+'</td>'+
+        '<td>'+B(r.Signal)+'</td>'+
         '</tr>'
       ).join('')+
       '</tbody></table>'
-    : '<div class="empty">No stocks found.</div>';
+    : '<div class="empty">No stocks found in My-Stocks.csv.</div>';
 }
+
 
 async function load(){
 set('status','LOADING');
 try{
-[D.latest,D.history,D.stats,D.tags]=await Promise.all([get(F.latest),get(F.history),get(F.stats),get(F.tags)]);
+[D.latest,D.history,D.stats,D.tags,D.master,D.monitor]=await Promise.all([
+  get(F.latest),get(F.history),get(F.stats),get(F.tags),get(F.master),get(F.monitor)
+]);
 set('status','LIVE');set('scan',D.latest.map(x=>x['Scan Time']).filter(Boolean).sort().at(-1)||'—');set('updated',new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}));
 let c={SETUP:0,WATCH:0,WAIT:0,IGNORE:0};D.latest.forEach(r=>{let s=String(r.Signal||'').toUpperCase();if(s.includes('SETUP'))c.SETUP++;else if(s.includes('WATCH'))c.WATCH++;else if(s.includes('WAIT'))c.WAIT++;else if(s.includes('IGNORE'))c.IGNORE++});
 set('setups',c.SETUP);set('watch',c.WATCH);set('wait',c.WAIT);set('ignore',c.IGNORE);set('active',D.history.filter(r=>String(r.Status).toUpperCase()==='ACTIVE').length);set('completed',D.history.filter(r=>String(r.Status).toUpperCase()==='COMPLETED').length);
