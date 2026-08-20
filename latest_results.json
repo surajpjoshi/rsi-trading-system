@@ -1,6 +1,6 @@
 [
   {
-    "Scan Time":"2026-08-20 15:44:05",
+    "Scan Time":"2026-08-20 15:58:57",
     "Symbol":"ASTERDM",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE914M01019",
@@ -37,7 +37,7 @@
     "Reason":"Weekly RSI 52.12 > 50 + Hourly RSI touched 30 + 15m Close > Previous 15m High"
   },
   {
-    "Scan Time":"2026-08-20 15:43:27",
+    "Scan Time":"2026-08-20 15:58:22",
     "Symbol":"NSE:ATHERENERG",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE0LEZ01016",
@@ -74,7 +74,7 @@
     "Reason":"Weekly RSI 74.84 > 50 + Hourly RSI touched 30 + 15m Close > Previous 15m High"
   },
   {
-    "Scan Time":"2026-08-20 15:43:16",
+    "Scan Time":"2026-08-20 15:58:11",
     "Symbol":"NSE:ABB",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE117A01022",
@@ -111,7 +111,7 @@
     "Reason":"Weekly RSI 60.13 > 50 + Hourly RSI touched 30 + 15m Close > Previous 15m High"
   },
   {
-    "Scan Time":"2026-08-20 15:43:44",
+    "Scan Time":"2026-08-20 15:58:38",
     "Symbol":"NSE:HSCL",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE019C01026",
@@ -148,7 +148,7 @@
     "Reason":"Weekly RSI 58.90 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 702.9 <= Previous High 707.25)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:40",
+    "Scan Time":"2026-08-20 15:58:34",
     "Symbol":"NSE:GRANULES",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE101D01020",
@@ -185,7 +185,7 @@
     "Reason":"Weekly RSI 63.29 > 50, but Hourly RSI has not touched 30 (current 33.07)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:39",
+    "Scan Time":"2026-08-20 15:58:33",
     "Symbol":"NSE:GLAND",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE068V01023",
@@ -222,7 +222,7 @@
     "Reason":"Weekly RSI 71.34 > 50, but Hourly RSI has not touched 30 (current 33.58)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:57",
+    "Scan Time":"2026-08-20 15:58:49",
     "Symbol":"NSE:SYRMA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE0DYJ01015",
@@ -259,7 +259,7 @@
     "Reason":"Weekly RSI 67.57 > 50, but Hourly RSI has not touched 30 (current 34.18)"
   },
   {
-    "Scan Time":"2026-08-20 15:44:01",
+    "Scan Time":"2026-08-20 15:58:53",
     "Symbol":"SYRMA",
     "Tag":"🔥🔥",
     "Instrument Key":"NSE_EQ|INE0DYJ01015",
@@ -296,7 +296,7 @@
     "Reason":"Weekly RSI 67.57 > 50, but Hourly RSI has not touched 30 (current 34.18)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:17",
+    "Scan Time":"2026-08-20 15:58:12",
     "Symbol":"NSE:ADANIENSOL",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE931S01010",
@@ -333,7 +333,7 @@
     "Reason":"Weekly RSI 60.06 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 1548.5 <= Previous High 1551.4)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:18",
+    "Scan Time":"2026-08-20 15:58:14",
     "Symbol":"NSE:AEGISVOPAK",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE0INX01018",
@@ -370,7 +370,7 @@
     "Reason":"Weekly RSI 57.35 > 50, but Hourly RSI has not touched 30 (current 35.96)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:20",
+    "Scan Time":"2026-08-20 15:58:15",
     "Symbol":"NSE:AIAENG",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE212H01026",
@@ -407,7 +407,7 @@
     "Reason":"Weekly RSI 52.12 > 50, but Hourly RSI has not touched 30 (current 36.31)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:50",
+    "Scan Time":"2026-08-20 15:58:42",
     "Symbol":"NSE:LLOYDSME",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE281B01032",
@@ -444,7 +444,7 @@
     "Reason":"Weekly RSI 61.35 > 50, but Hourly RSI has not touched 30 (current 36.32)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:51",
+    "Scan Time":"2026-08-20 15:58:44",
     "Symbol":"NSE:M&MFIN",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE774D01024",
@@ -481,7 +481,7 @@
     "Reason":"Weekly RSI 60.26 > 50, but Hourly RSI has not touched 30 (current 36.41)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:29",
+    "Scan Time":"2026-08-20 15:58:23",
     "Symbol":"NSE:AUROPHARMA",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE406A01037",
@@ -518,7 +518,7 @@
     "Reason":"Weekly RSI 65.23 > 50, but Hourly RSI has not touched 30 (current 36.81)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:33",
+    "Scan Time":"2026-08-20 15:58:28",
     "Symbol":"NSE:BHEL",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE257A01026",
@@ -555,7 +555,7 @@
     "Reason":"Weekly RSI 62.77 > 50, but Hourly RSI has not touched 30 (current 37.99)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:26",
+    "Scan Time":"2026-08-20 15:58:20",
     "Symbol":"NSE:ASTRAMICRO",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE386C01029",
@@ -592,7 +592,7 @@
     "Reason":"Weekly RSI 63.65 > 50, but Hourly RSI has not touched 30 (current 39.09)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:45",
+    "Scan Time":"2026-08-20 15:58:39",
     "Symbol":"NSE:INOXINDIA",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE616N01034",
@@ -629,7 +629,7 @@
     "Reason":"Weekly RSI 70.78 > 50, but Hourly RSI has not touched 30 (current 40.25)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:47",
+    "Scan Time":"2026-08-20 15:58:40",
     "Symbol":"NSE:JSWINFRA",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE880J01026",
@@ -666,7 +666,7 @@
     "Reason":"Weekly RSI 60.58 > 50, but Hourly RSI has not touched 30 (current 40.84)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:34",
+    "Scan Time":"2026-08-20 15:58:29",
     "Symbol":"NSE:CGCL",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE180C01042",
@@ -703,7 +703,7 @@
     "Reason":"Weekly RSI 58.33 > 50, but Hourly RSI has not touched 30 (current 41.34)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:49",
+    "Scan Time":"2026-08-20 15:58:41",
     "Symbol":"NSE:KALYANKJIL",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE303R01014",
@@ -740,7 +740,7 @@
     "Reason":"Weekly RSI 69.19 > 50, but Hourly RSI has not touched 30 (current 41.48)"
   },
   {
-    "Scan Time":"2026-08-20 15:44:00",
+    "Scan Time":"2026-08-20 15:58:52",
     "Symbol":"KALYANKJIL",
     "Tag":"🔥🔥🔥",
     "Instrument Key":"NSE_EQ|INE303R01014",
@@ -777,7 +777,7 @@
     "Reason":"Weekly RSI 69.19 > 50, but Hourly RSI has not touched 30 (current 41.48)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:31",
+    "Scan Time":"2026-08-20 15:58:26",
     "Symbol":"NSE:BHARATFORG",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE465A01025",
@@ -814,7 +814,7 @@
     "Reason":"Weekly RSI 57.27 > 50, but Hourly RSI has not touched 30 (current 42.03)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:37",
+    "Scan Time":"2026-08-20 15:58:31",
     "Symbol":"NSE:EXIDEIND",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE302A01020",
@@ -851,7 +851,7 @@
     "Reason":"Weekly RSI 68.10 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 462.0 <= Previous High 464.95)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:21",
+    "Scan Time":"2026-08-20 15:58:17",
     "Symbol":"NSE:ALIVUS",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE03Q201024",
@@ -888,7 +888,7 @@
     "Reason":"Weekly RSI 75.95 > 50, but Hourly RSI has not touched 30 (current 42.39)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:58",
+    "Scan Time":"2026-08-20 15:58:50",
     "Symbol":"NSE:TATATECH",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE142M01025",
@@ -925,7 +925,7 @@
     "Reason":"Weekly RSI 63.63 > 50, but Hourly RSI has not touched 30 (current 44.29)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:14",
+    "Scan Time":"2026-08-20 15:58:10",
     "Symbol":"NSE:LGEINDIA",
     "Tag":"IPO",
     "Instrument Key":"NSE_EQ|INE324D01010",
@@ -962,7 +962,7 @@
     "Reason":"Weekly RSI 53.77 > 50, but Hourly RSI has not touched 30 (current 45.00)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:36",
+    "Scan Time":"2026-08-20 15:58:30",
     "Symbol":"NSE:CHENNPETRO",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE178A01016",
@@ -999,7 +999,7 @@
     "Reason":"Weekly RSI 73.12 > 50, but Hourly RSI has not touched 30 (current 46.17)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:54",
+    "Scan Time":"2026-08-20 15:58:46",
     "Symbol":"NSE:RKFORGE",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE399G01023",
@@ -1036,7 +1036,7 @@
     "Reason":"Weekly RSI 73.48 > 50, but Hourly RSI has not touched 30 (current 46.61)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:23",
+    "Scan Time":"2026-08-20 15:58:18",
     "Symbol":"NSE:ANANDRATHI",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE463V01026",
@@ -1073,7 +1073,7 @@
     "Reason":"Weekly RSI 74.53 > 50, but Hourly RSI has not touched 30 (current 46.67)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:43",
+    "Scan Time":"2026-08-20 15:58:37",
     "Symbol":"NSE:HFCL",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE548A01028",
@@ -1110,7 +1110,7 @@
     "Reason":"Weekly RSI 76.57 > 50, but Hourly RSI has not touched 30 (current 46.84)"
   },
   {
-    "Scan Time":"2026-08-20 15:44:02",
+    "Scan Time":"2026-08-20 15:58:54",
     "Symbol":"HFCL",
     "Tag":"🔥🔥",
     "Instrument Key":"NSE_EQ|INE548A01028",
@@ -1147,7 +1147,7 @@
     "Reason":"Weekly RSI 76.57 > 50, but Hourly RSI has not touched 30 (current 46.84)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:55",
+    "Scan Time":"2026-08-20 15:58:48",
     "Symbol":"NSE:SOLARINDS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE343H01029",
@@ -1184,7 +1184,7 @@
     "Reason":"Weekly RSI 69.36 > 50, but Hourly RSI has not touched 30 (current 48.91)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:41",
+    "Scan Time":"2026-08-20 15:58:35",
     "Symbol":"NSE:HEROMOTOCO",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE158A01026",
@@ -1221,7 +1221,7 @@
     "Reason":"Weekly RSI 62.30 > 50, but Hourly RSI has not touched 30 (current 49.37)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:59",
+    "Scan Time":"2026-08-20 15:58:51",
     "Symbol":"NSE:ZENTEC",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE251B01027",
@@ -1258,7 +1258,7 @@
     "Reason":"Weekly RSI 60.79 > 50, but Hourly RSI has not touched 30 (current 49.52)"
   },
   {
-    "Scan Time":"2026-08-20 15:44:04",
+    "Scan Time":"2026-08-20 15:58:55",
     "Symbol":"ZENTEC",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE251B01027",
@@ -1295,7 +1295,7 @@
     "Reason":"Weekly RSI 60.79 > 50, but Hourly RSI has not touched 30 (current 49.52)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:53",
+    "Scan Time":"2026-08-20 15:58:45",
     "Symbol":"NSE:MOTHERSON",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE775A01035",
@@ -1332,7 +1332,7 @@
     "Reason":"Weekly RSI 74.63 > 50, but Hourly RSI has not touched 30 (current 49.76)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:25",
+    "Scan Time":"2026-08-20 15:58:19",
     "Symbol":"NSE:APARINDS",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE372A01015",
@@ -1369,7 +1369,7 @@
     "Reason":"Weekly RSI 71.81 > 50, but Hourly RSI has not touched 30 (current 50.75)"
   },
   {
-    "Scan Time":"2026-08-20 15:43:30",
+    "Scan Time":"2026-08-20 15:58:25",
     "Symbol":"NSE:BAJAJ-AUTO",
     "Tag":"Dashboard",
     "Instrument Key":"NSE_EQ|INE917I01010",
