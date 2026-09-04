@@ -1,6 +1,6 @@
 [
   {
-    "Scan Time":"2026-09-04 18:31:25",
+    "Scan Time":"2026-09-04 19:34:20",
     "Symbol":"NSE:TATATECH",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE142M01025",
@@ -8,7 +8,7 @@
     "Current Week RSI":59.11,
     "Previous Week RSI":64.35,
     "Weekly RSI Change":-5.24,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":39.37,
     "Previous Hourly RSI":42.36,
     "Hourly RSI Change":-2.99,
@@ -37,7 +37,7 @@
     "Reason":"Weekly RSI 59.11 > 50 + Hourly RSI touched 30 + 15m Close > Previous 15m High"
   },
   {
-    "Scan Time":"2026-09-04 18:30:39",
+    "Scan Time":"2026-09-04 19:33:38",
     "Symbol":"NSE:ETERNAL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE758T01015",
@@ -45,7 +45,7 @@
     "Current Week RSI":65.47,
     "Previous Week RSI":68.17,
     "Weekly RSI Change":-2.7,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":41.13,
     "Previous Hourly RSI":45.29,
     "Hourly RSI Change":-4.16,
@@ -74,7 +74,7 @@
     "Reason":"Weekly RSI 65.47 > 50 + Hourly RSI touched 30 + 15m Close > Previous 15m High"
   },
   {
-    "Scan Time":"2026-09-04 18:30:42",
+    "Scan Time":"2026-09-04 19:33:41",
     "Symbol":"NSE:FINCABLES",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE235A01022",
@@ -82,7 +82,7 @@
     "Current Week RSI":61.4,
     "Previous Week RSI":68.16,
     "Weekly RSI Change":-6.75,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":41.99,
     "Previous Hourly RSI":60.01,
     "Hourly RSI Change":-18.02,
@@ -111,7 +111,7 @@
     "Reason":"Weekly RSI 61.40 > 50 + Hourly RSI touched 30 + 15m Close > Previous 15m High"
   },
   {
-    "Scan Time":"2026-09-04 18:31:19",
+    "Scan Time":"2026-09-04 19:34:15",
     "Symbol":"NSE:RRKABEL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE777K01022",
@@ -119,7 +119,7 @@
     "Current Week RSI":57.93,
     "Previous Week RSI":78.58,
     "Weekly RSI Change":-20.65,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":19.12,
     "Previous Hourly RSI":32.4,
     "Hourly RSI Change":-13.28,
@@ -148,7 +148,7 @@
     "Reason":"Weekly RSI 57.93 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 2458.0 <= Previous High 2468.3)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:33",
+    "Scan Time":"2026-09-04 19:33:33",
     "Symbol":"NSE:BHARATFORG",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE465A01025",
@@ -156,7 +156,7 @@
     "Current Week RSI":50.25,
     "Previous Week RSI":55.59,
     "Weekly RSI Change":-5.33,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":28.59,
     "Previous Hourly RSI":34.79,
     "Hourly RSI Change":-6.2,
@@ -185,7 +185,7 @@
     "Reason":"Weekly RSI 50.25 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 1956.0 <= Previous High 1958.3)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:29",
+    "Scan Time":"2026-09-04 19:33:29",
     "Symbol":"NSE:ALIVUS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE03Q201024",
@@ -193,7 +193,7 @@
     "Current Week RSI":74.08,
     "Previous Week RSI":73.2,
     "Weekly RSI Change":0.87,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":32.74,
     "Previous Hourly RSI":54.86,
     "Hourly RSI Change":-22.12,
@@ -222,7 +222,7 @@
     "Reason":"Weekly RSI 74.08 > 50, but Hourly RSI has not touched 30 (current 32.74)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:51",
+    "Scan Time":"2026-09-04 19:34:44",
     "Symbol":"ALIVUS",
     "Tag":"Trend Breakout, Volume Shocker, All Time High",
     "Instrument Key":"NSE_EQ|INE03Q201024",
@@ -230,7 +230,7 @@
     "Current Week RSI":74.08,
     "Previous Week RSI":73.2,
     "Weekly RSI Change":0.87,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":32.74,
     "Previous Hourly RSI":54.86,
     "Hourly RSI Change":-22.12,
@@ -259,7 +259,7 @@
     "Reason":"Weekly RSI 74.08 > 50, but Hourly RSI has not touched 30 (current 32.74)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:32",
+    "Scan Time":"2026-09-04 19:33:32",
     "Symbol":"NSE:ATHERENERG",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE0LEZ01016",
@@ -267,7 +267,7 @@
     "Current Week RSI":77.06,
     "Previous Week RSI":79.94,
     "Weekly RSI Change":-2.88,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":33.0,
     "Previous Hourly RSI":44.9,
     "Hourly RSI Change":-11.9,
@@ -296,7 +296,7 @@
     "Reason":"Weekly RSI 77.06 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 1584.0 <= Previous High 1595.0)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:36",
+    "Scan Time":"2026-09-04 19:34:30",
     "Symbol":"ATHERENERG",
     "Tag":"Other",
     "Instrument Key":"NSE_EQ|INE0LEZ01016",
@@ -304,7 +304,7 @@
     "Current Week RSI":77.06,
     "Previous Week RSI":79.94,
     "Weekly RSI Change":-2.88,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":33.0,
     "Previous Hourly RSI":44.9,
     "Hourly RSI Change":-11.9,
@@ -333,7 +333,7 @@
     "Reason":"Weekly RSI 77.06 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 1584.0 <= Previous High 1595.0)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:06",
+    "Scan Time":"2026-09-04 19:34:03",
     "Symbol":"NSE:NEULANDLAB",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE794A01010",
@@ -341,7 +341,7 @@
     "Current Week RSI":72.39,
     "Previous Week RSI":76.6,
     "Weekly RSI Change":-4.22,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":34.12,
     "Previous Hourly RSI":43.38,
     "Hourly RSI Change":-9.26,
@@ -370,7 +370,7 @@
     "Reason":"Weekly RSI 72.39 > 50, but Hourly RSI has not touched 30 (current 34.12)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:24",
+    "Scan Time":"2026-09-04 19:33:23",
     "Symbol":"NSE:LGEINDIA",
     "Tag":"IPO",
     "Instrument Key":"NSE_EQ|INE324D01010",
@@ -378,7 +378,7 @@
     "Current Week RSI":53.49,
     "Previous Week RSI":56.84,
     "Weekly RSI Change":-3.36,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":34.95,
     "Previous Hourly RSI":44.64,
     "Hourly RSI Change":-9.69,
@@ -407,7 +407,7 @@
     "Reason":"Weekly RSI 53.49 > 50, but Hourly RSI has not touched 30 (current 34.95)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:40",
+    "Scan Time":"2026-09-04 19:33:39",
     "Symbol":"NSE:FEDERALBNK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE171A01029",
@@ -415,7 +415,7 @@
     "Current Week RSI":63.18,
     "Previous Week RSI":63.95,
     "Weekly RSI Change":-0.78,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":38.68,
     "Previous Hourly RSI":41.85,
     "Hourly RSI Change":-3.18,
@@ -444,7 +444,7 @@
     "Reason":"Weekly RSI 63.18 > 50, but Hourly RSI has not touched 30 (current 38.68)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:01",
+    "Scan Time":"2026-09-04 19:33:59",
     "Symbol":"NSE:NAUKRI",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE663F01032",
@@ -452,7 +452,7 @@
     "Current Week RSI":66.1,
     "Previous Week RSI":70.86,
     "Weekly RSI Change":-4.76,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":38.83,
     "Previous Hourly RSI":43.67,
     "Hourly RSI Change":-4.84,
@@ -481,7 +481,7 @@
     "Reason":"Weekly RSI 66.10 > 50, but Hourly RSI has not touched 30 (current 38.83)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:23",
+    "Scan Time":"2026-09-04 19:34:18",
     "Symbol":"NSE:STYL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE04VU01023",
@@ -489,7 +489,7 @@
     "Current Week RSI":59.88,
     "Previous Week RSI":64.69,
     "Weekly RSI Change":-4.82,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":39.06,
     "Previous Hourly RSI":47.22,
     "Hourly RSI Change":-8.16,
@@ -518,7 +518,7 @@
     "Reason":"Weekly RSI 59.88 > 50, but Hourly RSI has not touched 30 (current 39.06)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:47",
+    "Scan Time":"2026-09-04 19:34:41",
     "Symbol":"BALKRISIND",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE787D01026",
@@ -526,7 +526,7 @@
     "Current Week RSI":50.33,
     "Previous Week RSI":52.66,
     "Weekly RSI Change":-2.33,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":40.13,
     "Previous Hourly RSI":47.57,
     "Hourly RSI Change":-7.44,
@@ -555,7 +555,7 @@
     "Reason":"Weekly RSI 50.33 > 50, but Hourly RSI has not touched 30 (current 40.13)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:57",
+    "Scan Time":"2026-09-04 19:33:55",
     "Symbol":"NSE:LAURUSLABS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE947Q01028",
@@ -563,7 +563,7 @@
     "Current Week RSI":73.58,
     "Previous Week RSI":83.51,
     "Weekly RSI Change":-9.94,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":41.14,
     "Previous Hourly RSI":51.36,
     "Hourly RSI Change":-10.22,
@@ -592,7 +592,7 @@
     "Reason":"Weekly RSI 73.58 > 50, but Hourly RSI has not touched 30 (current 41.14)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:27",
+    "Scan Time":"2026-09-04 19:33:27",
     "Symbol":"NSE:AKUMS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE09XN01023",
@@ -600,7 +600,7 @@
     "Current Week RSI":72.98,
     "Previous Week RSI":74.5,
     "Weekly RSI Change":-1.52,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":42.12,
     "Previous Hourly RSI":52.48,
     "Hourly RSI Change":-10.35,
@@ -629,7 +629,7 @@
     "Reason":"Weekly RSI 72.98 > 50, but Hourly RSI has not touched 30 (current 42.12)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:09",
+    "Scan Time":"2026-09-04 19:34:06",
     "Symbol":"NSE:NYKAA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE388Y01029",
@@ -637,7 +637,7 @@
     "Current Week RSI":69.74,
     "Previous Week RSI":72.19,
     "Weekly RSI Change":-2.45,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":42.15,
     "Previous Hourly RSI":45.81,
     "Hourly RSI Change":-3.66,
@@ -666,7 +666,7 @@
     "Reason":"Weekly RSI 69.74 > 50, but Hourly RSI has not touched 30 (current 42.15)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:50",
+    "Scan Time":"2026-09-04 19:33:48",
     "Symbol":"NSE:HONASA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE0J5401028",
@@ -674,7 +674,7 @@
     "Current Week RSI":67.26,
     "Previous Week RSI":67.19,
     "Weekly RSI Change":0.07,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":42.83,
     "Previous Hourly RSI":50.67,
     "Hourly RSI Change":-7.84,
@@ -703,7 +703,7 @@
     "Reason":"Weekly RSI 67.26 > 50, but Hourly RSI has not touched 30 (current 42.83)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:37",
+    "Scan Time":"2026-09-04 19:33:36",
     "Symbol":"NSE:DIVISLAB",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE361B01024",
@@ -711,7 +711,7 @@
     "Current Week RSI":83.42,
     "Previous Week RSI":87.74,
     "Weekly RSI Change":-4.32,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":42.88,
     "Previous Hourly RSI":57.01,
     "Hourly RSI Change":-14.13,
@@ -740,7 +740,7 @@
     "Reason":"Weekly RSI 83.42 > 50, but Hourly RSI has not touched 30 (current 42.88)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:35",
+    "Scan Time":"2026-09-04 19:33:35",
     "Symbol":"NSE:CYIENT",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE136B01020",
@@ -748,7 +748,7 @@
     "Current Week RSI":66.94,
     "Previous Week RSI":67.67,
     "Weekly RSI Change":-0.73,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":42.95,
     "Previous Hourly RSI":47.03,
     "Hourly RSI Change":-4.08,
@@ -777,7 +777,7 @@
     "Reason":"Weekly RSI 66.94 > 50, but Hourly RSI has not touched 30 (current 42.95)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:41",
+    "Scan Time":"2026-09-04 19:34:35",
     "Symbol":"CYIENT",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE136B01020",
@@ -785,7 +785,7 @@
     "Current Week RSI":66.94,
     "Previous Week RSI":67.67,
     "Weekly RSI Change":-0.73,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":42.95,
     "Previous Hourly RSI":47.03,
     "Hourly RSI Change":-4.08,
@@ -814,7 +814,7 @@
     "Reason":"Weekly RSI 66.94 > 50, but Hourly RSI has not touched 30 (current 42.95)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:52",
+    "Scan Time":"2026-09-04 19:33:50",
     "Symbol":"NSE:ICICIBANK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE090A01021",
@@ -822,7 +822,7 @@
     "Current Week RSI":59.96,
     "Previous Week RSI":59.9,
     "Weekly RSI Change":0.06,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":42.99,
     "Previous Hourly RSI":47.38,
     "Hourly RSI Change":-4.38,
@@ -851,7 +851,7 @@
     "Reason":"Weekly RSI 59.96 > 50, but Hourly RSI has not touched 30 (current 42.99)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:26",
+    "Scan Time":"2026-09-04 19:34:21",
     "Symbol":"NSE:TBOTEK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE673O01025",
@@ -859,7 +859,7 @@
     "Current Week RSI":66.65,
     "Previous Week RSI":66.36,
     "Weekly RSI Change":0.29,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":43.02,
     "Previous Hourly RSI":54.19,
     "Hourly RSI Change":-11.18,
@@ -888,7 +888,7 @@
     "Reason":"Weekly RSI 66.65 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 1679.0 <= Previous High 1706.8)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:54",
+    "Scan Time":"2026-09-04 19:33:52",
     "Symbol":"NSE:JINDALSAW",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE324A01032",
@@ -896,7 +896,7 @@
     "Current Week RSI":69.21,
     "Previous Week RSI":70.72,
     "Weekly RSI Change":-1.51,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":43.16,
     "Previous Hourly RSI":52.63,
     "Hourly RSI Change":-9.46,
@@ -925,7 +925,7 @@
     "Reason":"Weekly RSI 69.21 > 50, but Hourly RSI has not touched 30 (current 43.16)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:43",
+    "Scan Time":"2026-09-04 19:34:36",
     "Symbol":"JINDALSAW",
     "Tag":"Volume Shocker, Watch for Entry",
     "Instrument Key":"NSE_EQ|INE324A01032",
@@ -933,7 +933,7 @@
     "Current Week RSI":69.21,
     "Previous Week RSI":70.72,
     "Weekly RSI Change":-1.51,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":43.16,
     "Previous Hourly RSI":52.63,
     "Hourly RSI Change":-9.46,
@@ -962,7 +962,7 @@
     "Reason":"Weekly RSI 69.21 > 50, but Hourly RSI has not touched 30 (current 43.16)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:21",
+    "Scan Time":"2026-09-04 19:34:16",
     "Symbol":"NSE:SONACOMS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE073K01018",
@@ -970,7 +970,7 @@
     "Current Week RSI":71.15,
     "Previous Week RSI":77.51,
     "Weekly RSI Change":-6.36,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":43.78,
     "Previous Hourly RSI":51.55,
     "Hourly RSI Change":-7.78,
@@ -999,7 +999,7 @@
     "Reason":"Weekly RSI 71.15 > 50, but Hourly RSI has not touched 30 (current 43.78)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:07",
+    "Scan Time":"2026-09-04 19:34:04",
     "Symbol":"NSE:NMDC",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE584A01023",
@@ -1007,7 +1007,7 @@
     "Current Week RSI":50.17,
     "Previous Week RSI":54.74,
     "Weekly RSI Change":-4.58,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":44.88,
     "Previous Hourly RSI":39.86,
     "Hourly RSI Change":5.02,
@@ -1036,7 +1036,7 @@
     "Reason":"Weekly RSI 50.17 > 50, but Hourly RSI has not touched 30 (current 44.88)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:29",
+    "Scan Time":"2026-09-04 19:34:24",
     "Symbol":"NSE:ZENTEC",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE251B01027",
@@ -1044,7 +1044,7 @@
     "Current Week RSI":55.0,
     "Previous Week RSI":55.93,
     "Weekly RSI Change":-0.93,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":45.38,
     "Previous Hourly RSI":50.6,
     "Hourly RSI Change":-5.22,
@@ -1073,7 +1073,7 @@
     "Reason":"Weekly RSI 55.00 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 1799.0 <= Previous High 1808.9)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:16",
+    "Scan Time":"2026-09-04 19:34:12",
     "Symbol":"NSE:PERSISTENT",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE262H01021",
@@ -1081,7 +1081,7 @@
     "Current Week RSI":56.71,
     "Previous Week RSI":62.4,
     "Weekly RSI Change":-5.69,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":45.52,
     "Previous Hourly RSI":47.3,
     "Hourly RSI Change":-1.78,
@@ -1110,7 +1110,7 @@
     "Reason":"Weekly RSI 56.71 > 50, but Hourly RSI has not touched 30 (current 45.52)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:31",
+    "Scan Time":"2026-09-04 19:34:26",
     "Symbol":"E2E",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE255Z01027",
@@ -1118,7 +1118,7 @@
     "Current Week RSI":69.41,
     "Previous Week RSI":71.73,
     "Weekly RSI Change":-2.32,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":45.9,
     "Previous Hourly RSI":37.19,
     "Hourly RSI Change":8.71,
@@ -1147,7 +1147,7 @@
     "Reason":"Weekly RSI 69.41 > 50, but Hourly RSI has not touched 30 (current 45.90)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:59",
+    "Scan Time":"2026-09-04 19:33:57",
     "Symbol":"NSE:NATIONALUM",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE139A01034",
@@ -1155,7 +1155,7 @@
     "Current Week RSI":52.02,
     "Previous Week RSI":58.23,
     "Weekly RSI Change":-6.2,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":46.16,
     "Previous Hourly RSI":45.86,
     "Hourly RSI Change":0.3,
@@ -1184,7 +1184,7 @@
     "Reason":"Weekly RSI 52.02 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 374.1 <= Previous High 375.1)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:12",
+    "Scan Time":"2026-09-04 19:34:09",
     "Symbol":"NSE:OFSS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE881D01027",
@@ -1192,7 +1192,7 @@
     "Current Week RSI":67.77,
     "Previous Week RSI":69.45,
     "Weekly RSI Change":-1.67,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":46.18,
     "Previous Hourly RSI":52.84,
     "Hourly RSI Change":-6.66,
@@ -1221,7 +1221,7 @@
     "Reason":"Weekly RSI 67.77 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 12058.0 <= Previous High 12089.0)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:38",
+    "Scan Time":"2026-09-04 19:34:32",
     "Symbol":"GODREJAGRO",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE850D01014",
@@ -1229,7 +1229,7 @@
     "Current Week RSI":62.69,
     "Previous Week RSI":56.44,
     "Weekly RSI Change":6.24,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":46.22,
     "Previous Hourly RSI":57.94,
     "Hourly RSI Change":-11.72,
@@ -1258,7 +1258,7 @@
     "Reason":"Weekly RSI 62.69 > 50, but Hourly RSI has not touched 30 (current 46.22)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:04",
+    "Scan Time":"2026-09-04 19:34:02",
     "Symbol":"NSE:NETWEB",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE0NT901020",
@@ -1266,7 +1266,7 @@
     "Current Week RSI":62.1,
     "Previous Week RSI":64.46,
     "Weekly RSI Change":-2.36,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":46.3,
     "Previous Hourly RSI":56.16,
     "Hourly RSI Change":-9.86,
@@ -1295,7 +1295,7 @@
     "Reason":"Weekly RSI 62.10 > 50, but Hourly RSI has not touched 30 (current 46.30)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:55",
+    "Scan Time":"2026-09-04 19:33:54",
     "Symbol":"NSE:JUSTDIAL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE599M01018",
@@ -1303,7 +1303,7 @@
     "Current Week RSI":58.73,
     "Previous Week RSI":60.77,
     "Weekly RSI Change":-2.05,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":46.6,
     "Previous Hourly RSI":46.76,
     "Hourly RSI Change":-0.16,
@@ -1332,7 +1332,7 @@
     "Reason":"Weekly RSI 58.73 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 693.0 <= Previous High 695.1)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:49",
+    "Scan Time":"2026-09-04 19:33:46",
     "Symbol":"NSE:HINDALCO",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE038A01020",
@@ -1340,7 +1340,7 @@
     "Current Week RSI":53.52,
     "Previous Week RSI":57.56,
     "Weekly RSI Change":-4.03,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":47.27,
     "Previous Hourly RSI":46.19,
     "Hourly RSI Change":1.08,
@@ -1369,7 +1369,7 @@
     "Reason":"Weekly RSI 53.52 > 50, but Hourly RSI has not touched 30 (current 47.27)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:14",
+    "Scan Time":"2026-09-04 19:34:11",
     "Symbol":"NSE:PARAS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE045601023",
@@ -1377,7 +1377,7 @@
     "Current Week RSI":67.41,
     "Previous Week RSI":69.18,
     "Weekly RSI Change":-1.77,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":48.08,
     "Previous Hourly RSI":46.28,
     "Hourly RSI Change":1.8,
@@ -1406,7 +1406,7 @@
     "Reason":"Weekly RSI 67.41 > 50, but Hourly RSI has not touched 30 (current 48.08)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:34",
+    "Scan Time":"2026-09-04 19:34:28",
     "Symbol":"PARAS",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE045601023",
@@ -1414,7 +1414,7 @@
     "Current Week RSI":67.41,
     "Previous Week RSI":69.18,
     "Weekly RSI Change":-1.77,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":48.08,
     "Previous Hourly RSI":46.28,
     "Hourly RSI Change":1.8,
@@ -1443,7 +1443,7 @@
     "Reason":"Weekly RSI 67.41 > 50, but Hourly RSI has not touched 30 (current 48.08)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:18",
+    "Scan Time":"2026-09-04 19:34:13",
     "Symbol":"NSE:PRESTIGE",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE811K01011",
@@ -1451,7 +1451,7 @@
     "Current Week RSI":54.27,
     "Previous Week RSI":54.35,
     "Weekly RSI Change":-0.08,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":48.22,
     "Previous Hourly RSI":57.81,
     "Hourly RSI Change":-9.59,
@@ -1480,7 +1480,7 @@
     "Reason":"Weekly RSI 54.27 > 50, but Hourly RSI has not touched 30 (current 48.22)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:33",
+    "Scan Time":"2026-09-04 19:34:27",
     "Symbol":"AEROFLEX",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE024001021",
@@ -1488,7 +1488,7 @@
     "Current Week RSI":71.33,
     "Previous Week RSI":72.29,
     "Weekly RSI Change":-0.96,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":48.46,
     "Previous Hourly RSI":50.07,
     "Hourly RSI Change":-1.61,
@@ -1517,7 +1517,7 @@
     "Reason":"Weekly RSI 71.33 > 50, but Hourly RSI has not touched 30 (current 48.46)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:03",
+    "Scan Time":"2026-09-04 19:34:00",
     "Symbol":"NSE:NAVINFLUOR",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE048G01026",
@@ -1525,7 +1525,7 @@
     "Current Week RSI":78.01,
     "Previous Week RSI":77.63,
     "Weekly RSI Change":0.38,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":48.54,
     "Previous Hourly RSI":61.45,
     "Hourly RSI Change":-12.91,
@@ -1554,7 +1554,7 @@
     "Reason":"Weekly RSI 78.01 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 8553.0 <= Previous High 8569.0)"
   },
   {
-    "Scan Time":"2026-09-04 18:31:11",
+    "Scan Time":"2026-09-04 19:34:08",
     "Symbol":"NSE:OBEROIRLTY",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE093I01010",
@@ -1562,7 +1562,7 @@
     "Current Week RSI":60.27,
     "Previous Week RSI":59.91,
     "Weekly RSI Change":0.35,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":48.6,
     "Previous Hourly RSI":60.7,
     "Hourly RSI Change":-12.1,
@@ -1591,7 +1591,7 @@
     "Reason":"Weekly RSI 60.27 > 50, but Hourly RSI has not touched 30 (current 48.60)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:43",
+    "Scan Time":"2026-09-04 19:33:42",
     "Symbol":"NSE:GODREJPROP",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE484J01027",
@@ -1599,7 +1599,7 @@
     "Current Week RSI":53.42,
     "Previous Week RSI":56.33,
     "Weekly RSI Change":-2.91,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":48.71,
     "Previous Hourly RSI":53.84,
     "Hourly RSI Change":-5.13,
@@ -1628,7 +1628,7 @@
     "Reason":"Weekly RSI 53.42 > 50, but Hourly RSI has not touched 30 (current 48.71)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:25",
+    "Scan Time":"2026-09-04 19:33:25",
     "Symbol":"NSE:ABB",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE117A01022",
@@ -1636,7 +1636,7 @@
     "Current Week RSI":58.28,
     "Previous Week RSI":60.23,
     "Weekly RSI Change":-1.95,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":48.95,
     "Previous Hourly RSI":51.81,
     "Hourly RSI Change":-2.87,
@@ -1665,7 +1665,7 @@
     "Reason":"Weekly RSI 58.28 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 7410.0 <= Previous High 7419.0)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:30",
+    "Scan Time":"2026-09-04 19:33:30",
     "Symbol":"NSE:APARINDS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE372A01015",
@@ -1673,7 +1673,7 @@
     "Current Week RSI":71.7,
     "Previous Week RSI":75.02,
     "Weekly RSI Change":-3.32,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":49.74,
     "Previous Hourly RSI":60.3,
     "Hourly RSI Change":-10.56,
@@ -1702,7 +1702,7 @@
     "Reason":"Weekly RSI 71.70 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 17437.0 <= Previous High 17450.0)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:47",
+    "Scan Time":"2026-09-04 19:33:45",
     "Symbol":"NSE:HFCL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE548A01028",
@@ -1710,7 +1710,7 @@
     "Current Week RSI":70.36,
     "Previous Week RSI":81.07,
     "Weekly RSI Change":-10.71,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":49.76,
     "Previous Hourly RSI":20.64,
     "Hourly RSI Change":29.12,
@@ -1739,7 +1739,7 @@
     "Reason":"Weekly RSI 70.36 > 50 + Hourly RSI touched 30 + 15m price confirmation failed (Close 231.44 <= Previous High 231.44)"
   },
   {
-    "Scan Time":"2026-09-04 18:30:13",
+    "Scan Time":"2026-09-04 19:33:12",
     "Symbol":"MASTEK",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE759A01021",
@@ -1747,7 +1747,7 @@
     "Current Week RSI":50.61,
     "Previous Week RSI":57.06,
     "Weekly RSI Change":-6.45,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":50.12,
     "Previous Hourly RSI":56.56,
     "Hourly RSI Change":-6.44,
@@ -1776,7 +1776,7 @@
     "Reason":"Weekly RSI 50.61 > 50; Hourly RSI 50.12; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:38",
+    "Scan Time":"2026-09-04 19:32:38",
     "Symbol":"NSE:VIJAYA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE043W01024",
@@ -1784,7 +1784,7 @@
     "Current Week RSI":67.52,
     "Previous Week RSI":65.33,
     "Weekly RSI Change":2.2,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":50.55,
     "Previous Hourly RSI":51.84,
     "Hourly RSI Change":-1.29,
@@ -1813,7 +1813,7 @@
     "Reason":"Weekly RSI 67.52 > 50; Hourly RSI 50.55; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:47",
+    "Scan Time":"2026-09-04 19:31:52",
     "Symbol":"NSE:LLOYDSME",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE281B01032",
@@ -1821,7 +1821,7 @@
     "Current Week RSI":56.48,
     "Previous Week RSI":55.79,
     "Weekly RSI Change":0.68,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":50.6,
     "Previous Hourly RSI":59.66,
     "Hourly RSI Change":-9.06,
@@ -1850,7 +1850,7 @@
     "Reason":"Hourly RSI 50.60; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:28:48",
+    "Scan Time":"2026-09-04 19:31:53",
     "Symbol":"NSE:LODHA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE670K01029",
@@ -1858,7 +1858,7 @@
     "Current Week RSI":60.47,
     "Previous Week RSI":65.3,
     "Weekly RSI Change":-4.83,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":51.39,
     "Previous Hourly RSI":56.8,
     "Hourly RSI Change":-5.41,
@@ -1887,7 +1887,7 @@
     "Reason":"Weekly RSI 60.47 > 50; Hourly RSI 51.39; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:27:59",
+    "Scan Time":"2026-09-04 19:31:04",
     "Symbol":"NSE:CARTRADE",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE290S01011",
@@ -1895,7 +1895,7 @@
     "Current Week RSI":67.2,
     "Previous Week RSI":67.83,
     "Weekly RSI Change":-0.62,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":52.13,
     "Previous Hourly RSI":55.31,
     "Hourly RSI Change":-3.18,
@@ -1924,7 +1924,7 @@
     "Reason":"Hourly RSI 52.13; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:30:04",
+    "Scan Time":"2026-09-04 19:33:04",
     "Symbol":"CARTRADE",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE290S01011",
@@ -1932,7 +1932,7 @@
     "Current Week RSI":67.2,
     "Previous Week RSI":67.83,
     "Weekly RSI Change":-0.62,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":52.13,
     "Previous Hourly RSI":55.31,
     "Hourly RSI Change":-3.18,
@@ -1961,7 +1961,7 @@
     "Reason":"Hourly RSI 52.13; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:27:34",
+    "Scan Time":"2026-09-04 19:30:42",
     "Symbol":"NSE:ADANIENT",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE423A01024",
@@ -1969,7 +1969,7 @@
     "Current Week RSI":55.88,
     "Previous Week RSI":67.64,
     "Weekly RSI Change":-11.76,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":52.34,
     "Previous Hourly RSI":41.93,
     "Hourly RSI Change":10.41,
@@ -1998,7 +1998,7 @@
     "Reason":"Weekly RSI 55.88 > 50; Hourly RSI 52.34; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:51",
+    "Scan Time":"2026-09-04 19:31:55",
     "Symbol":"NSE:MIDHANI",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE099Z01011",
@@ -2006,7 +2006,7 @@
     "Current Week RSI":55.63,
     "Previous Week RSI":55.38,
     "Weekly RSI Change":0.25,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":52.52,
     "Previous Hourly RSI":49.19,
     "Hourly RSI Change":3.33,
@@ -2035,7 +2035,7 @@
     "Reason":"Hourly RSI 52.52; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:28:50",
+    "Scan Time":"2026-09-04 19:31:54",
     "Symbol":"NSE:MCX",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE745G01043",
@@ -2043,7 +2043,7 @@
     "Current Week RSI":67.0,
     "Previous Week RSI":69.59,
     "Weekly RSI Change":-2.59,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":52.92,
     "Previous Hourly RSI":33.13,
     "Hourly RSI Change":19.78,
@@ -2072,7 +2072,7 @@
     "Reason":"Weekly RSI 67.00 > 50; Hourly RSI 52.92; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:53",
+    "Scan Time":"2026-09-04 19:32:52",
     "Symbol":"JYOTICNC",
     "Tag":"Trend Breakout",
     "Instrument Key":"NSE_EQ|INE980O01024",
@@ -2080,7 +2080,7 @@
     "Current Week RSI":66.13,
     "Previous Week RSI":70.39,
     "Weekly RSI Change":-4.26,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":53.41,
     "Previous Hourly RSI":67.68,
     "Hourly RSI Change":-14.26,
@@ -2109,7 +2109,7 @@
     "Reason":"Hourly RSI 53.41; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:28:09",
+    "Scan Time":"2026-09-04 19:31:14",
     "Symbol":"NSE:DATAPATTNS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE0IX101010",
@@ -2117,7 +2117,7 @@
     "Current Week RSI":59.93,
     "Previous Week RSI":60.82,
     "Weekly RSI Change":-0.89,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":53.48,
     "Previous Hourly RSI":55.31,
     "Hourly RSI Change":-1.83,
@@ -2146,7 +2146,7 @@
     "Reason":"Hourly RSI 53.48; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:27:35",
+    "Scan Time":"2026-09-04 19:30:43",
     "Symbol":"NSE:AEGISLOG",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE208C01025",
@@ -2154,7 +2154,7 @@
     "Current Week RSI":61.74,
     "Previous Week RSI":62.98,
     "Weekly RSI Change":-1.23,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":54.63,
     "Previous Hourly RSI":63.98,
     "Hourly RSI Change":-9.35,
@@ -2183,7 +2183,7 @@
     "Reason":"Hourly RSI 54.63; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:29:49",
+    "Scan Time":"2026-09-04 19:32:49",
     "Symbol":"AEGISLOG",
     "Tag":"All Time High",
     "Instrument Key":"NSE_EQ|INE208C01025",
@@ -2191,7 +2191,7 @@
     "Current Week RSI":61.74,
     "Previous Week RSI":62.98,
     "Weekly RSI Change":-1.23,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":54.63,
     "Previous Hourly RSI":63.98,
     "Hourly RSI Change":-9.35,
@@ -2220,7 +2220,7 @@
     "Reason":"Hourly RSI 54.63; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:27:50",
+    "Scan Time":"2026-09-04 19:30:56",
     "Symbol":"NSE:BALRAMCHIN",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE119A01028",
@@ -2228,7 +2228,7 @@
     "Current Week RSI":67.13,
     "Previous Week RSI":63.63,
     "Weekly RSI Change":3.5,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":54.69,
     "Previous Hourly RSI":62.92,
     "Hourly RSI Change":-8.23,
@@ -2257,7 +2257,7 @@
     "Reason":"Weekly RSI 67.13 > 50; Hourly RSI 54.69; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:30:06",
+    "Scan Time":"2026-09-04 19:33:06",
     "Symbol":"BALRAMCHIN",
     "Tag":"All Time High",
     "Instrument Key":"NSE_EQ|INE119A01028",
@@ -2265,7 +2265,7 @@
     "Current Week RSI":67.13,
     "Previous Week RSI":63.63,
     "Weekly RSI Change":3.5,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":54.69,
     "Previous Hourly RSI":62.92,
     "Hourly RSI Change":-8.23,
@@ -2294,7 +2294,7 @@
     "Reason":"Weekly RSI 67.13 > 50; Hourly RSI 54.69; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:36",
+    "Scan Time":"2026-09-04 19:31:40",
     "Symbol":"NSE:IPCALAB",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE571A01038",
@@ -2302,7 +2302,7 @@
     "Current Week RSI":68.93,
     "Previous Week RSI":68.32,
     "Weekly RSI Change":0.61,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":55.22,
     "Previous Hourly RSI":50.64,
     "Hourly RSI Change":4.59,
@@ -2331,7 +2331,7 @@
     "Reason":"Weekly RSI 68.93 > 50; Hourly RSI 55.22; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:04",
+    "Scan Time":"2026-09-04 19:31:09",
     "Symbol":"NSE:COFORGE",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE591G01025",
@@ -2339,7 +2339,7 @@
     "Current Week RSI":70.81,
     "Previous Week RSI":73.94,
     "Weekly RSI Change":-3.13,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":55.38,
     "Previous Hourly RSI":54.93,
     "Hourly RSI Change":0.45,
@@ -2368,7 +2368,7 @@
     "Reason":"Weekly RSI 70.81 > 50; Hourly RSI 55.38; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:16",
+    "Scan Time":"2026-09-04 19:32:19",
     "Symbol":"NSE:SAIL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE114A01011",
@@ -2376,7 +2376,7 @@
     "Current Week RSI":63.5,
     "Previous Week RSI":65.71,
     "Weekly RSI Change":-2.21,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":55.64,
     "Previous Hourly RSI":56.35,
     "Hourly RSI Change":-0.71,
@@ -2405,7 +2405,7 @@
     "Reason":"Weekly RSI 63.50 > 50; Hourly RSI 55.64; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:45",
+    "Scan Time":"2026-09-04 19:31:49",
     "Symbol":"NSE:KOTAKBANK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE237A01036",
@@ -2413,7 +2413,7 @@
     "Current Week RSI":62.04,
     "Previous Week RSI":61.78,
     "Weekly RSI Change":0.25,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":55.68,
     "Previous Hourly RSI":45.1,
     "Hourly RSI Change":10.58,
@@ -2442,7 +2442,7 @@
     "Reason":"Weekly RSI 62.04 > 50; Hourly RSI 55.68; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:39",
+    "Scan Time":"2026-09-04 19:31:44",
     "Symbol":"NSE:JINDALSTEL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE749A01030",
@@ -2450,7 +2450,7 @@
     "Current Week RSI":55.35,
     "Previous Week RSI":57.38,
     "Weekly RSI Change":-2.03,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":55.83,
     "Previous Hourly RSI":43.78,
     "Hourly RSI Change":12.05,
@@ -2479,7 +2479,7 @@
     "Reason":"Weekly RSI 55.35 > 50; Hourly RSI 55.83; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:57",
+    "Scan Time":"2026-09-04 19:32:01",
     "Symbol":"NSE:NAZARA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE418L01047",
@@ -2487,7 +2487,7 @@
     "Current Week RSI":72.62,
     "Previous Week RSI":75.79,
     "Weekly RSI Change":-3.17,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":55.87,
     "Previous Hourly RSI":53.71,
     "Hourly RSI Change":2.17,
@@ -2516,7 +2516,7 @@
     "Reason":"Hourly RSI 55.87; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:30:15",
+    "Scan Time":"2026-09-04 19:33:15",
     "Symbol":"NAZARA",
     "Tag":"Volume Shocker, All Time High",
     "Instrument Key":"NSE_EQ|INE418L01047",
@@ -2524,7 +2524,7 @@
     "Current Week RSI":72.62,
     "Previous Week RSI":75.79,
     "Weekly RSI Change":-3.17,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":55.87,
     "Previous Hourly RSI":53.71,
     "Hourly RSI Change":2.17,
@@ -2553,7 +2553,7 @@
     "Reason":"Weekly RSI 72.62 > 50; Hourly RSI 55.87; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:12",
+    "Scan Time":"2026-09-04 19:31:18",
     "Symbol":"NSE:DYNAMATECH",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE221B01012",
@@ -2561,7 +2561,7 @@
     "Current Week RSI":59.1,
     "Previous Week RSI":57.66,
     "Weekly RSI Change":1.45,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":55.98,
     "Previous Hourly RSI":50.35,
     "Hourly RSI Change":5.63,
@@ -2590,7 +2590,7 @@
     "Reason":"Weekly RSI 59.10 > 50; Hourly RSI 55.98; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:19",
+    "Scan Time":"2026-09-04 19:32:21",
     "Symbol":"NSE:SAREGAMA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE979A01025",
@@ -2598,7 +2598,7 @@
     "Current Week RSI":61.42,
     "Previous Week RSI":61.44,
     "Weekly RSI Change":-0.02,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":56.65,
     "Previous Hourly RSI":58.97,
     "Hourly RSI Change":-2.32,
@@ -2627,7 +2627,7 @@
     "Reason":"Hourly RSI 56.65; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:28:44",
+    "Scan Time":"2026-09-04 19:31:48",
     "Symbol":"NSE:KIRLOSENG",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE146L01010",
@@ -2635,7 +2635,7 @@
     "Current Week RSI":62.15,
     "Previous Week RSI":59.7,
     "Weekly RSI Change":2.45,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":56.81,
     "Previous Hourly RSI":73.97,
     "Hourly RSI Change":-17.15,
@@ -2664,7 +2664,7 @@
     "Reason":"Weekly RSI 62.15 > 50; Hourly RSI 56.81; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:11",
+    "Scan Time":"2026-09-04 19:31:17",
     "Symbol":"NSE:DLF",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE271C01023",
@@ -2672,7 +2672,7 @@
     "Current Week RSI":58.55,
     "Previous Week RSI":58.19,
     "Weekly RSI Change":0.36,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":57.16,
     "Previous Hourly RSI":56.93,
     "Hourly RSI Change":0.22,
@@ -2701,7 +2701,7 @@
     "Reason":"Weekly RSI 58.55 > 50; Hourly RSI 57.16; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:28",
+    "Scan Time":"2026-09-04 19:32:29",
     "Symbol":"NSE:SYRMA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE0DYJ01015",
@@ -2709,7 +2709,7 @@
     "Current Week RSI":67.11,
     "Previous Week RSI":68.64,
     "Weekly RSI Change":-1.53,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":57.82,
     "Previous Hourly RSI":56.49,
     "Hourly RSI Change":1.33,
@@ -2738,7 +2738,7 @@
     "Reason":"Hourly RSI 57.82; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:27:55",
+    "Scan Time":"2026-09-04 19:31:01",
     "Symbol":"NSE:BHEL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE257A01026",
@@ -2746,7 +2746,7 @@
     "Current Week RSI":65.96,
     "Previous Week RSI":65.92,
     "Weekly RSI Change":0.05,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":57.85,
     "Previous Hourly RSI":59.91,
     "Hourly RSI Change":-2.07,
@@ -2775,7 +2775,7 @@
     "Reason":"Weekly RSI 65.96 > 50; Hourly RSI 57.85; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:39",
+    "Scan Time":"2026-09-04 19:32:39",
     "Symbol":"NSE:WELCORP",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE191B01025",
@@ -2783,7 +2783,7 @@
     "Current Week RSI":94.49,
     "Previous Week RSI":93.33,
     "Weekly RSI Change":1.16,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":58.06,
     "Previous Hourly RSI":66.47,
     "Hourly RSI Change":-8.41,
@@ -2812,7 +2812,7 @@
     "Reason":"Weekly RSI 94.49 > 50; Hourly RSI 58.06; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:51",
+    "Scan Time":"2026-09-04 19:32:51",
     "Symbol":"WELCORP",
     "Tag":"Strong Momentum",
     "Instrument Key":"NSE_EQ|INE191B01025",
@@ -2820,7 +2820,7 @@
     "Current Week RSI":94.49,
     "Previous Week RSI":93.33,
     "Weekly RSI Change":1.16,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":58.06,
     "Previous Hourly RSI":66.47,
     "Hourly RSI Change":-8.41,
@@ -2849,7 +2849,7 @@
     "Reason":"Weekly RSI 94.49 > 50; Hourly RSI 58.06; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:11",
+    "Scan Time":"2026-09-04 19:32:14",
     "Symbol":"NSE:PHOENIXLTD",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE211B01039",
@@ -2857,7 +2857,7 @@
     "Current Week RSI":56.59,
     "Previous Week RSI":54.97,
     "Weekly RSI Change":1.62,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":58.19,
     "Previous Hourly RSI":69.02,
     "Hourly RSI Change":-10.83,
@@ -2886,7 +2886,7 @@
     "Reason":"Weekly RSI 56.59 > 50; Hourly RSI 58.19; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:08",
+    "Scan Time":"2026-09-04 19:32:12",
     "Symbol":"NSE:PAYTM",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE982J01020",
@@ -2894,7 +2894,7 @@
     "Current Week RSI":75.34,
     "Previous Week RSI":75.05,
     "Weekly RSI Change":0.29,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":59.13,
     "Previous Hourly RSI":50.55,
     "Hourly RSI Change":8.58,
@@ -2923,7 +2923,7 @@
     "Reason":"Hourly RSI 59.13; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:30:01",
+    "Scan Time":"2026-09-04 19:33:00",
     "Symbol":"PAYTM",
     "Tag":"All Time High",
     "Instrument Key":"NSE_EQ|INE982J01020",
@@ -2931,7 +2931,7 @@
     "Current Week RSI":75.34,
     "Previous Week RSI":75.05,
     "Weekly RSI Change":0.29,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":59.13,
     "Previous Hourly RSI":50.55,
     "Hourly RSI Change":8.58,
@@ -2960,7 +2960,7 @@
     "Reason":"Weekly RSI 75.34 > 50; Hourly RSI 59.13; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:26",
+    "Scan Time":"2026-09-04 19:31:31",
     "Symbol":"NSE:HINDZINC",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE267A01025",
@@ -2968,7 +2968,7 @@
     "Current Week RSI":54.82,
     "Previous Week RSI":58.39,
     "Weekly RSI Change":-3.57,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":59.31,
     "Previous Hourly RSI":40.62,
     "Hourly RSI Change":18.68,
@@ -2997,7 +2997,7 @@
     "Reason":"Weekly RSI 54.82 > 50; Hourly RSI 59.31; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:27:41",
+    "Scan Time":"2026-09-04 19:30:48",
     "Symbol":"NSE:ANANDRATHI",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE463V01026",
@@ -3005,7 +3005,7 @@
     "Current Week RSI":76.48,
     "Previous Week RSI":76.38,
     "Weekly RSI Change":0.1,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":59.32,
     "Previous Hourly RSI":53.61,
     "Hourly RSI Change":5.7,
@@ -3034,7 +3034,7 @@
     "Reason":"Weekly RSI 76.48 > 50; Hourly RSI 59.32; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:32",
+    "Scan Time":"2026-09-04 19:31:36",
     "Symbol":"NSE:IDFCFIRSTB",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE092T01019",
@@ -3042,7 +3042,7 @@
     "Current Week RSI":64.95,
     "Previous Week RSI":59.95,
     "Weekly RSI Change":5.0,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":59.71,
     "Previous Hourly RSI":68.75,
     "Hourly RSI Change":-9.04,
@@ -3071,7 +3071,7 @@
     "Reason":"Weekly RSI 64.95 > 50; Hourly RSI 59.71; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:34",
+    "Scan Time":"2026-09-04 19:32:35",
     "Symbol":"NSE:UNIMECH",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE0U3I01011",
@@ -3079,7 +3079,7 @@
     "Current Week RSI":73.45,
     "Previous Week RSI":73.49,
     "Weekly RSI Change":-0.04,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":59.85,
     "Previous Hourly RSI":51.75,
     "Hourly RSI Change":8.1,
@@ -3108,7 +3108,7 @@
     "Reason":"Weekly RSI 73.45 > 50; Hourly RSI 59.85; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:59",
+    "Scan Time":"2026-09-04 19:32:58",
     "Symbol":"ENGINERSIN",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE510A01028",
@@ -3116,7 +3116,7 @@
     "Current Week RSI":67.96,
     "Previous Week RSI":60.54,
     "Weekly RSI Change":7.42,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":59.93,
     "Previous Hourly RSI":63.04,
     "Hourly RSI Change":-3.11,
@@ -3145,7 +3145,7 @@
     "Reason":"Weekly RSI 67.96 > 50; Hourly RSI 59.93; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:43",
+    "Scan Time":"2026-09-04 19:32:43",
     "Symbol":"NSE:YESBANK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE528G01035",
@@ -3153,7 +3153,7 @@
     "Current Week RSI":50.92,
     "Previous Week RSI":48.24,
     "Weekly RSI Change":2.68,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":59.96,
     "Previous Hourly RSI":62.08,
     "Hourly RSI Change":-2.12,
@@ -3182,7 +3182,7 @@
     "Reason":"Weekly RSI 50.92 > 50; Hourly RSI 59.96; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:08",
+    "Scan Time":"2026-09-04 19:31:13",
     "Symbol":"NSE:CYIENTDLM",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE055S01018",
@@ -3190,7 +3190,7 @@
     "Current Week RSI":90.1,
     "Previous Week RSI":89.08,
     "Weekly RSI Change":1.02,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":60.52,
     "Previous Hourly RSI":50.73,
     "Hourly RSI Change":9.79,
@@ -3219,7 +3219,7 @@
     "Reason":"Weekly RSI 90.10 > 50; Hourly RSI 60.52; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:40",
+    "Scan Time":"2026-09-04 19:31:45",
     "Symbol":"NSE:JSL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE220G01021",
@@ -3227,7 +3227,7 @@
     "Current Week RSI":52.05,
     "Previous Week RSI":44.63,
     "Weekly RSI Change":7.42,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":60.64,
     "Previous Hourly RSI":63.95,
     "Hourly RSI Change":-3.31,
@@ -3256,7 +3256,7 @@
     "Reason":"Weekly RSI 52.05 > 50; Hourly RSI 60.64; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:18",
+    "Scan Time":"2026-09-04 19:32:20",
     "Symbol":"NSE:SAILIFE",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE570L01029",
@@ -3264,7 +3264,7 @@
     "Current Week RSI":84.91,
     "Previous Week RSI":81.61,
     "Weekly RSI Change":3.3,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":60.78,
     "Previous Hourly RSI":59.24,
     "Hourly RSI Change":1.55,
@@ -3293,7 +3293,7 @@
     "Reason":"Weekly RSI 84.91 > 50; Hourly RSI 60.78; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:41",
+    "Scan Time":"2026-09-04 19:31:46",
     "Symbol":"NSE:JSWSTEEL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE019A01038",
@@ -3301,7 +3301,7 @@
     "Current Week RSI":62.33,
     "Previous Week RSI":64.37,
     "Weekly RSI Change":-2.04,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":60.98,
     "Previous Hourly RSI":49.7,
     "Hourly RSI Change":11.28,
@@ -3330,7 +3330,7 @@
     "Reason":"Weekly RSI 62.33 > 50; Hourly RSI 60.98; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:34",
+    "Scan Time":"2026-09-04 19:31:38",
     "Symbol":"NSE:INDUSINDBK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE095A01012",
@@ -3338,7 +3338,7 @@
     "Current Week RSI":59.98,
     "Previous Week RSI":58.08,
     "Weekly RSI Change":1.9,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":61.39,
     "Previous Hourly RSI":59.34,
     "Hourly RSI Change":2.05,
@@ -3367,7 +3367,7 @@
     "Reason":"Weekly RSI 59.98 > 50; Hourly RSI 61.39; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:30:02",
+    "Scan Time":"2026-09-04 19:33:03",
     "Symbol":"MAHABANK",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE457A01014",
@@ -3375,7 +3375,7 @@
     "Current Week RSI":62.18,
     "Previous Week RSI":59.66,
     "Weekly RSI Change":2.53,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":61.44,
     "Previous Hourly RSI":64.87,
     "Hourly RSI Change":-3.43,
@@ -3404,7 +3404,7 @@
     "Reason":"Weekly RSI 62.18 > 50; Hourly RSI 61.44; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:05",
+    "Scan Time":"2026-09-04 19:31:10",
     "Symbol":"NSE:CRAFTSMAN",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE00LO01017",
@@ -3412,7 +3412,7 @@
     "Current Week RSI":74.33,
     "Previous Week RSI":72.77,
     "Weekly RSI Change":1.55,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":62.17,
     "Previous Hourly RSI":52.76,
     "Hourly RSI Change":9.42,
@@ -3441,7 +3441,7 @@
     "Reason":"Weekly RSI 74.33 > 50; Hourly RSI 62.17; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:20",
+    "Scan Time":"2026-09-04 19:31:25",
     "Symbol":"NSE:HAL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE066F01020",
@@ -3449,7 +3449,7 @@
     "Current Week RSI":60.64,
     "Previous Week RSI":60.83,
     "Weekly RSI Change":-0.19,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":62.22,
     "Previous Hourly RSI":44.41,
     "Hourly RSI Change":17.82,
@@ -3478,7 +3478,7 @@
     "Reason":"Hourly RSI 62.22; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:27:45",
+    "Scan Time":"2026-09-04 19:30:51",
     "Symbol":"NSE:APLAPOLLO",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE702C01027",
@@ -3486,7 +3486,7 @@
     "Current Week RSI":68.42,
     "Previous Week RSI":69.72,
     "Weekly RSI Change":-1.3,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":62.98,
     "Previous Hourly RSI":36.84,
     "Hourly RSI Change":26.14,
@@ -3515,7 +3515,7 @@
     "Reason":"Weekly RSI 68.42 > 50; Hourly RSI 62.98; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:27:58",
+    "Scan Time":"2026-09-04 19:31:03",
     "Symbol":"NSE:CAPLIPOINT",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE475E01026",
@@ -3523,7 +3523,7 @@
     "Current Week RSI":73.69,
     "Previous Week RSI":65.06,
     "Weekly RSI Change":8.63,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":63.0,
     "Previous Hourly RSI":67.2,
     "Hourly RSI Change":-4.2,
@@ -3552,7 +3552,7 @@
     "Reason":"Hourly RSI 63.00; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:30:22",
+    "Scan Time":"2026-09-04 19:33:22",
     "Symbol":"CAPLIPOINT",
     "Tag":"Volume Shocker, All Time High",
     "Instrument Key":"NSE_EQ|INE475E01026",
@@ -3560,7 +3560,7 @@
     "Current Week RSI":73.69,
     "Previous Week RSI":65.06,
     "Weekly RSI Change":8.63,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":63.0,
     "Previous Hourly RSI":67.2,
     "Hourly RSI Change":-4.2,
@@ -3589,7 +3589,7 @@
     "Reason":"Weekly RSI 73.69 > 50; Hourly RSI 63.00; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:27:43",
+    "Scan Time":"2026-09-04 19:30:49",
     "Symbol":"NSE:ANANTRAJ",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE242C01024",
@@ -3597,7 +3597,7 @@
     "Current Week RSI":59.71,
     "Previous Week RSI":57.14,
     "Weekly RSI Change":2.57,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":63.32,
     "Previous Hourly RSI":65.04,
     "Hourly RSI Change":-1.71,
@@ -3626,7 +3626,7 @@
     "Reason":"Hourly RSI 63.32; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:27:56",
+    "Scan Time":"2026-09-04 19:31:02",
     "Symbol":"NSE:BRIGADE",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE791I01019",
@@ -3634,7 +3634,7 @@
     "Current Week RSI":67.34,
     "Previous Week RSI":61.47,
     "Weekly RSI Change":5.88,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":63.64,
     "Previous Hourly RSI":81.87,
     "Hourly RSI Change":-18.23,
@@ -3663,7 +3663,7 @@
     "Reason":"Weekly RSI 67.34 > 50; Hourly RSI 63.64; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:17",
+    "Scan Time":"2026-09-04 19:31:23",
     "Symbol":"NSE:GLAND",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE068V01023",
@@ -3671,7 +3671,7 @@
     "Current Week RSI":73.59,
     "Previous Week RSI":72.7,
     "Weekly RSI Change":0.89,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":63.86,
     "Previous Hourly RSI":60.1,
     "Hourly RSI Change":3.76,
@@ -3700,7 +3700,7 @@
     "Reason":"Weekly RSI 73.59 > 50; Hourly RSI 63.86; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:30:20",
+    "Scan Time":"2026-09-04 19:33:20",
     "Symbol":"GLAND",
     "Tag":"Volume Shocker, 52 Week High, All Time High, Strong Momentum, Pullback Entry",
     "Instrument Key":"NSE_EQ|INE068V01023",
@@ -3708,7 +3708,7 @@
     "Current Week RSI":73.59,
     "Previous Week RSI":72.7,
     "Weekly RSI Change":0.89,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":63.86,
     "Previous Hourly RSI":60.1,
     "Hourly RSI Change":3.76,
@@ -3737,7 +3737,7 @@
     "Reason":"Weekly RSI 73.59 > 50; Hourly RSI 63.86; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:27:52",
+    "Scan Time":"2026-09-04 19:30:59",
     "Symbol":"NSE:BEML",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE258A01024",
@@ -3745,7 +3745,7 @@
     "Current Week RSI":64.49,
     "Previous Week RSI":61.27,
     "Weekly RSI Change":3.23,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":65.74,
     "Previous Hourly RSI":69.95,
     "Hourly RSI Change":-4.22,
@@ -3774,7 +3774,7 @@
     "Reason":"Weekly RSI 64.49 > 50; Hourly RSI 65.74; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:27:37",
+    "Scan Time":"2026-09-04 19:30:44",
     "Symbol":"NSE:AFFLE",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE00WC01027",
@@ -3782,7 +3782,7 @@
     "Current Week RSI":54.79,
     "Previous Week RSI":55.08,
     "Weekly RSI Change":-0.29,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":66.77,
     "Previous Hourly RSI":38.21,
     "Hourly RSI Change":28.56,
@@ -3811,7 +3811,7 @@
     "Reason":"Hourly RSI 66.77; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:28:30",
+    "Scan Time":"2026-09-04 19:31:35",
     "Symbol":"NSE:IDEA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE669E01016",
@@ -3819,7 +3819,7 @@
     "Current Week RSI":66.44,
     "Previous Week RSI":64.75,
     "Weekly RSI Change":1.69,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":66.97,
     "Previous Hourly RSI":48.39,
     "Hourly RSI Change":18.58,
@@ -3848,7 +3848,7 @@
     "Reason":"Hourly RSI 66.97; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:27:33",
+    "Scan Time":"2026-09-04 19:30:41",
     "Symbol":"NSE:ACMESOLAR",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE622W01025",
@@ -3856,7 +3856,7 @@
     "Current Week RSI":71.62,
     "Previous Week RSI":67.65,
     "Weekly RSI Change":3.96,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":67.65,
     "Previous Hourly RSI":52.03,
     "Hourly RSI Change":15.62,
@@ -3885,7 +3885,7 @@
     "Reason":"Weekly RSI 71.62 > 50; Hourly RSI 67.65; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:20",
+    "Scan Time":"2026-09-04 19:32:22",
     "Symbol":"NSE:SCHNEIDER",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE839M01018",
@@ -3893,7 +3893,7 @@
     "Current Week RSI":52.57,
     "Previous Week RSI":50.8,
     "Weekly RSI Change":1.77,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":69.0,
     "Previous Hourly RSI":55.87,
     "Hourly RSI Change":13.13,
@@ -3922,7 +3922,7 @@
     "Reason":"Hourly RSI 69.00; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:28:52",
+    "Scan Time":"2026-09-04 19:31:56",
     "Symbol":"NSE:MTARTECH",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE864I01014",
@@ -3930,7 +3930,7 @@
     "Current Week RSI":60.95,
     "Previous Week RSI":59.71,
     "Weekly RSI Change":1.25,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":69.04,
     "Previous Hourly RSI":42.6,
     "Hourly RSI Change":26.44,
@@ -3959,7 +3959,7 @@
     "Reason":"Weekly RSI 60.95 > 50; Hourly RSI 69.04; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:27:46",
+    "Scan Time":"2026-09-04 19:30:53",
     "Symbol":"NSE:ASTRAMICRO",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE386C01029",
@@ -3967,7 +3967,7 @@
     "Current Week RSI":64.91,
     "Previous Week RSI":63.99,
     "Weekly RSI Change":0.92,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":69.22,
     "Previous Hourly RSI":47.81,
     "Hourly RSI Change":21.41,
@@ -3996,7 +3996,7 @@
     "Reason":"Weekly RSI 64.91 > 50; Hourly RSI 69.22; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:29",
+    "Scan Time":"2026-09-04 19:32:30",
     "Symbol":"NSE:TATACOMM",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE151A01013",
@@ -4004,7 +4004,7 @@
     "Current Week RSI":50.75,
     "Previous Week RSI":45.62,
     "Weekly RSI Change":5.13,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":69.6,
     "Previous Hourly RSI":48.85,
     "Hourly RSI Change":20.75,
@@ -4033,7 +4033,7 @@
     "Reason":"Weekly RSI 50.75 > 50; Hourly RSI 69.60; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:24",
+    "Scan Time":"2026-09-04 19:32:25",
     "Symbol":"NSE:SOLARINDS",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE343H01029",
@@ -4041,7 +4041,7 @@
     "Current Week RSI":76.21,
     "Previous Week RSI":72.62,
     "Weekly RSI Change":3.59,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":69.93,
     "Previous Hourly RSI":72.08,
     "Hourly RSI Change":-2.15,
@@ -4070,7 +4070,7 @@
     "Reason":"Weekly RSI 76.21 > 50; Hourly RSI 69.93; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:35",
+    "Scan Time":"2026-09-04 19:32:36",
     "Symbol":"NSE:URBANCO",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE0CAZ01013",
@@ -4078,7 +4078,7 @@
     "Current Week RSI":75.44,
     "Previous Week RSI":71.03,
     "Weekly RSI Change":4.41,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":71.93,
     "Previous Hourly RSI":65.94,
     "Hourly RSI Change":5.99,
@@ -4107,7 +4107,7 @@
     "Reason":"Weekly RSI 75.44 > 50; Hourly RSI 71.93; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:55",
+    "Scan Time":"2026-09-04 19:32:54",
     "Symbol":"URBANCO",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE0CAZ01013",
@@ -4115,7 +4115,7 @@
     "Current Week RSI":75.44,
     "Previous Week RSI":71.03,
     "Weekly RSI Change":4.41,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":71.93,
     "Previous Hourly RSI":65.94,
     "Hourly RSI Change":5.99,
@@ -4144,7 +4144,7 @@
     "Reason":"Weekly RSI 75.44 > 50; Hourly RSI 71.93; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:33",
+    "Scan Time":"2026-09-04 19:31:37",
     "Symbol":"NSE:IFCI",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE039A01010",
@@ -4152,7 +4152,7 @@
     "Current Week RSI":73.52,
     "Previous Week RSI":67.86,
     "Weekly RSI Change":5.66,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":72.86,
     "Previous Hourly RSI":59.47,
     "Hourly RSI Change":13.39,
@@ -4181,7 +4181,7 @@
     "Reason":"Weekly RSI 73.52 > 50; Hourly RSI 72.86; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:30:07",
+    "Scan Time":"2026-09-04 19:33:08",
     "Symbol":"MANYAVAR",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE825V01034",
@@ -4189,7 +4189,7 @@
     "Current Week RSI":73.3,
     "Previous Week RSI":67.89,
     "Weekly RSI Change":5.4,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":73.63,
     "Previous Hourly RSI":59.57,
     "Hourly RSI Change":14.06,
@@ -4218,7 +4218,7 @@
     "Reason":"Weekly RSI 73.30 > 50; Hourly RSI 73.63; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:02",
+    "Scan Time":"2026-09-04 19:31:07",
     "Symbol":"NSE:CHENNPETRO",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE178A01016",
@@ -4226,7 +4226,7 @@
     "Current Week RSI":72.41,
     "Previous Week RSI":67.3,
     "Weekly RSI Change":5.11,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":74.3,
     "Previous Hourly RSI":70.29,
     "Hourly RSI Change":4.01,
@@ -4255,7 +4255,7 @@
     "Reason":"Hourly RSI 74.30; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:28:35",
+    "Scan Time":"2026-09-04 19:31:39",
     "Symbol":"NSE:INOXINDIA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE616N01034",
@@ -4263,7 +4263,7 @@
     "Current Week RSI":81.14,
     "Previous Week RSI":78.17,
     "Weekly RSI Change":2.97,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":74.69,
     "Previous Hourly RSI":64.61,
     "Hourly RSI Change":10.08,
@@ -4292,7 +4292,7 @@
     "Reason":"Weekly RSI 81.14 > 50; Hourly RSI 74.69; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:30:10",
+    "Scan Time":"2026-09-04 19:33:10",
     "Symbol":"INOXINDIA",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE616N01034",
@@ -4300,7 +4300,7 @@
     "Current Week RSI":81.14,
     "Previous Week RSI":78.17,
     "Weekly RSI Change":2.97,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":74.69,
     "Previous Hourly RSI":64.61,
     "Hourly RSI Change":10.08,
@@ -4329,7 +4329,7 @@
     "Reason":"Weekly RSI 81.14 > 50; Hourly RSI 74.69; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:46",
+    "Scan Time":"2026-09-04 19:32:46",
     "Symbol":"SUDEEPPHRM",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE0QPI01025",
@@ -4337,7 +4337,7 @@
     "Current Week RSI":81.64,
     "Previous Week RSI":76.08,
     "Weekly RSI Change":5.56,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":76.37,
     "Previous Hourly RSI":70.13,
     "Hourly RSI Change":6.24,
@@ -4366,7 +4366,7 @@
     "Reason":"Weekly RSI 81.64 > 50; Hourly RSI 76.37; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:41",
+    "Scan Time":"2026-09-04 19:32:42",
     "Symbol":"NSE:WOCKPHARMA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE049B01025",
@@ -4374,7 +4374,7 @@
     "Current Week RSI":65.41,
     "Previous Week RSI":61.55,
     "Weekly RSI Change":3.86,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":77.99,
     "Previous Hourly RSI":60.29,
     "Hourly RSI Change":17.7,
@@ -4403,7 +4403,7 @@
     "Reason":"Hourly RSI 77.99; touch <=30 recorded; waiting for 15m monitoring confirmation"
   },
   {
-    "Scan Time":"2026-09-04 18:29:01",
+    "Scan Time":"2026-09-04 19:32:04",
     "Symbol":"NSE:NIACL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE470Y01017",
@@ -4411,7 +4411,7 @@
     "Current Week RSI":73.85,
     "Previous Week RSI":59.73,
     "Weekly RSI Change":14.12,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":81.53,
     "Previous Hourly RSI":51.69,
     "Hourly RSI Change":29.84,
@@ -4440,7 +4440,7 @@
     "Reason":"Weekly RSI 73.85 > 50; Hourly RSI 81.53; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:28:00",
+    "Scan Time":"2026-09-04 19:31:05",
     "Symbol":"NSE:CGCL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE180C01042",
@@ -4448,7 +4448,7 @@
     "Current Week RSI":74.12,
     "Previous Week RSI":69.22,
     "Weekly RSI Change":4.9,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":83.85,
     "Previous Hourly RSI":77.73,
     "Hourly RSI Change":6.12,
@@ -4477,7 +4477,7 @@
     "Reason":"Weekly RSI 74.12 > 50; Hourly RSI 83.85; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:14",
+    "Scan Time":"2026-09-04 19:32:17",
     "Symbol":"NSE:RBLBANK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE976G01028",
@@ -4485,7 +4485,7 @@
     "Current Week RSI":67.89,
     "Previous Week RSI":60.59,
     "Weekly RSI Change":7.3,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":84.36,
     "Previous Hourly RSI":80.2,
     "Hourly RSI Change":4.16,
@@ -4514,7 +4514,7 @@
     "Reason":"Weekly RSI 67.89 > 50; Hourly RSI 84.36; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:29:40",
+    "Scan Time":"2026-09-04 19:32:40",
     "Symbol":"NSE:WELSPUNLIV",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE192B01031",
@@ -4522,7 +4522,7 @@
     "Current Week RSI":78.77,
     "Previous Week RSI":73.89,
     "Weekly RSI Change":4.88,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":84.38,
     "Previous Hourly RSI":72.55,
     "Hourly RSI Change":11.83,
@@ -4551,7 +4551,7 @@
     "Reason":"Weekly RSI 78.77 > 50; Hourly RSI 84.38; 15m confirmation checked only while monitored"
   },
   {
-    "Scan Time":"2026-09-04 18:31:40",
+    "Scan Time":"2026-09-04 19:34:33",
     "Symbol":"FACT",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE188A01015",
@@ -4559,7 +4559,7 @@
     "Current Week RSI":44.01,
     "Previous Week RSI":48.14,
     "Weekly RSI Change":-4.13,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":34.64,
     "Previous Hourly RSI":36.28,
     "Hourly RSI Change":-1.64,
@@ -4588,7 +4588,7 @@
     "Reason":"Weekly RSI 44.01 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:30:45",
+    "Scan Time":"2026-09-04 19:33:43",
     "Symbol":"NSE:HEXT",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE093A01041",
@@ -4596,7 +4596,7 @@
     "Current Week RSI":46.52,
     "Previous Week RSI":51.29,
     "Weekly RSI Change":-4.77,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":38.54,
     "Previous Hourly RSI":41.19,
     "Hourly RSI Change":-2.65,
@@ -4625,7 +4625,7 @@
     "Reason":"Weekly RSI 46.52 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:31:46",
+    "Scan Time":"2026-09-04 19:34:39",
     "Symbol":"ASHOKA",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE442H01029",
@@ -4633,7 +4633,7 @@
     "Current Week RSI":38.19,
     "Previous Week RSI":34.95,
     "Weekly RSI Change":3.24,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":38.83,
     "Previous Hourly RSI":47.45,
     "Hourly RSI Change":-8.62,
@@ -4662,7 +4662,7 @@
     "Reason":"Weekly RSI 38.19 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:31:44",
+    "Scan Time":"2026-09-04 19:34:38",
     "Symbol":"BBTC",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE050A01025",
@@ -4670,7 +4670,7 @@
     "Current Week RSI":45.42,
     "Previous Week RSI":50.84,
     "Weekly RSI Change":-5.42,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":42.21,
     "Previous Hourly RSI":45.56,
     "Hourly RSI Change":-3.35,
@@ -4699,7 +4699,7 @@
     "Reason":"Weekly RSI 45.42 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:31:50",
+    "Scan Time":"2026-09-04 19:34:42",
     "Symbol":"ASTRAL",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE006I01046",
@@ -4707,7 +4707,7 @@
     "Current Week RSI":49.28,
     "Previous Week RSI":52.75,
     "Weekly RSI Change":-3.47,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":44.69,
     "Previous Hourly RSI":45.91,
     "Hourly RSI Change":-1.22,
@@ -4736,7 +4736,7 @@
     "Reason":"Weekly RSI 49.28 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:31:28",
+    "Scan Time":"2026-09-04 19:34:23",
     "Symbol":"NSE:VEDL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE205A01025",
@@ -4744,7 +4744,7 @@
     "Current Week RSI":34.93,
     "Previous Week RSI":36.57,
     "Weekly RSI Change":-1.64,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":47.43,
     "Previous Hourly RSI":41.65,
     "Hourly RSI Change":5.78,
@@ -4773,7 +4773,7 @@
     "Reason":"Weekly RSI 34.93 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:30:14",
+    "Scan Time":"2026-09-04 19:33:14",
     "Symbol":"NEWGEN",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE619B01017",
@@ -4781,7 +4781,7 @@
     "Current Week RSI":47.61,
     "Previous Week RSI":53.23,
     "Weekly RSI Change":-5.61,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":50.61,
     "Previous Hourly RSI":42.29,
     "Hourly RSI Change":8.32,
@@ -4810,7 +4810,7 @@
     "Reason":"Weekly RSI 47.61 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:27:51",
+    "Scan Time":"2026-09-04 19:30:57",
     "Symbol":"NSE:BANDHANBNK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE545U01014",
@@ -4818,7 +4818,7 @@
     "Current Week RSI":41.74,
     "Previous Week RSI":43.13,
     "Weekly RSI Change":-1.39,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":51.86,
     "Previous Hourly RSI":48.21,
     "Hourly RSI Change":3.65,
@@ -4847,7 +4847,7 @@
     "Reason":"Weekly RSI 41.74 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:28:21",
+    "Scan Time":"2026-09-04 19:31:26",
     "Symbol":"NSE:HDFCBANK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE040A01034",
@@ -4855,7 +4855,7 @@
     "Current Week RSI":31.5,
     "Previous Week RSI":32.76,
     "Weekly RSI Change":-1.25,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":54.21,
     "Previous Hourly RSI":46.17,
     "Hourly RSI Change":8.03,
@@ -4884,7 +4884,7 @@
     "Reason":"Weekly RSI 31.50 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:27:49",
+    "Scan Time":"2026-09-04 19:30:55",
     "Symbol":"NSE:AXISBANK",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE238A01034",
@@ -4892,7 +4892,7 @@
     "Current Week RSI":49.59,
     "Previous Week RSI":48.5,
     "Weekly RSI Change":1.09,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":56.41,
     "Previous Hourly RSI":52.23,
     "Hourly RSI Change":4.18,
@@ -4921,7 +4921,7 @@
     "Reason":"Weekly RSI 49.59 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:29:23",
+    "Scan Time":"2026-09-04 19:32:24",
     "Symbol":"NSE:SOBHA",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE671H01015",
@@ -4929,7 +4929,7 @@
     "Current Week RSI":39.66,
     "Previous Week RSI":40.11,
     "Weekly RSI Change":-0.45,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":56.75,
     "Previous Hourly RSI":58.41,
     "Hourly RSI Change":-1.66,
@@ -4958,7 +4958,7 @@
     "Reason":"Weekly RSI 39.66 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:28:03",
+    "Scan Time":"2026-09-04 19:31:08",
     "Symbol":"NSE:COCHINSHIP",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE704P01025",
@@ -4966,7 +4966,7 @@
     "Current Week RSI":49.7,
     "Previous Week RSI":52.35,
     "Weekly RSI Change":-2.65,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":57.92,
     "Previous Hourly RSI":49.97,
     "Hourly RSI Change":7.96,
@@ -4995,7 +4995,7 @@
     "Reason":"Weekly RSI 49.70 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:30:09",
+    "Scan Time":"2026-09-04 19:33:09",
     "Symbol":"WHIRLPOOL",
     "Tag":"Volume Shocker",
     "Instrument Key":"NSE_EQ|INE716A01013",
@@ -5003,7 +5003,7 @@
     "Current Week RSI":45.74,
     "Previous Week RSI":45.34,
     "Weekly RSI Change":0.41,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":63.31,
     "Previous Hourly RSI":55.35,
     "Hourly RSI Change":7.96,
@@ -5032,7 +5032,7 @@
     "Reason":"Weekly RSI 45.74 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:29:21",
+    "Scan Time":"2026-09-04 19:32:23",
     "Symbol":"NSE:SIGNATURE",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE903U01023",
@@ -5040,7 +5040,7 @@
     "Current Week RSI":45.18,
     "Previous Week RSI":43.04,
     "Weekly RSI Change":2.14,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":64.54,
     "Previous Hourly RSI":64.2,
     "Hourly RSI Change":0.34,
@@ -5069,7 +5069,7 @@
     "Reason":"Weekly RSI 45.18 <= 50"
   },
   {
-    "Scan Time":"2026-09-04 18:29:30",
+    "Scan Time":"2026-09-04 19:32:31",
     "Symbol":"NSE:TATASTEEL",
     "Tag":"",
     "Instrument Key":"NSE_EQ|INE081A01020",
@@ -5077,7 +5077,7 @@
     "Current Week RSI":47.49,
     "Previous Week RSI":45.31,
     "Weekly RSI Change":2.17,
-    "Current Hour":"2026-09-04 18:00",
+    "Current Hour":"2026-09-04 19:00",
     "Current Hourly RSI":67.72,
     "Previous Hourly RSI":52.24,
     "Hourly RSI Change":15.47,
