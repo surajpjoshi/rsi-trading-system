@@ -1,16 +1,16 @@
 ﻿Metric,Value
-Total Setups,254.0
+Total Setups,255.0
 Completed Setups,193.0
-Active Setups,61.0
-+1% Hit Rate %,7.09
-+2% Hit Rate %,5.91
-+3% Hit Rate %,4.72
-+5% Hit Rate %,2.36
--1% Hit Rate %,16.14
--2% Hit Rate %,14.17
--3% Hit Rate %,11.81
-Average Max Gain %,-0.04
-Average Max Loss %,-2.21
+Active Setups,62.0
++1% Hit Rate %,7.06
++2% Hit Rate %,5.88
++3% Hit Rate %,4.71
++5% Hit Rate %,2.35
+-1% Hit Rate %,16.08
+-2% Hit Rate %,14.51
+-3% Hit Rate %,12.94
+Average Max Gain %,0.06
+Average Max Loss %,-2.31
 Average 1D Return %,0.0
 Average 3D Return %,0.0
 Average 5D Return %,0.0
